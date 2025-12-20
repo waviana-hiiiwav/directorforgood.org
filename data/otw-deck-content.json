@@ -1,0 +1,60 @@
+{
+  "cover": {
+    "title": "Oakland Tech Week",
+    "tagline": "Building the Ecosystem Oakland Deserves",
+    "subtagline": "The flagship ecosystem convening for founders, investors, artists, and technologists.",
+    "url": "oaklandtechweek.com"
+  },
+  "slides": [
+    {
+      "id": "otw-vision",
+      "title": "The Vision",
+      "subtitle": "Oakland as a global hub for culture and technology.",
+      "sections": [
+        {
+          "heading": "Our Mission",
+          "text": "Oakland Tech Week launched as HiiiWAV's flagship ecosystem convening—bringing together founders, investors, artists, and technologists for collaboration, learning, and community building."
+        }
+      ],
+      "highlight": "Oakland's unique position at the intersection of culture and technology.",
+      "image": {
+        "type": "photo",
+        "placeholder": "Oakland Tech Week Event Photo with diverse crowd"
+      }
+    },
+    {
+      "id": "otw-outcomes",
+      "title": "Key Outcomes",
+      "subtitle": "Measuring our impact in 2024.",
+      "sections": [
+        {
+          "heading": "Community & Capital",
+          "items": [
+            "Multiple ecosystem convenings throughout the year",
+            "Connections between Oakland founders and Bay Area investors",
+            "Showcased local innovation to national audiences",
+            "Platform for AFRO AI graduates to present their work",
+            "Foundation for annual Oakland Tech Week tradition"
+          ]
+        }
+      ],
+      "image": {
+        "type": "infographic",
+        "placeholder": "Infographic showing key stats: 500+ attendees, 20+ partners, etc."
+      }
+    }
+  ],
+  "slideOrder": [
+    "otw-vision",
+    "otw-outcomes"
+  ],
+  "ask": {
+    "amount": "$250k",
+    "items": [
+      "Expand OTW 2025 to a full week of city-wide programming",
+      "Build the permanent OTW digital portal",
+      "Support year-round founder/investor matchmaking"
+    ]
+  }
+}
+

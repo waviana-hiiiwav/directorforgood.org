@@ -26,8 +26,8 @@
       "highlight": "Promising orgs plateau at $300–600k or quietly shut down — not for lack of impact, but for lack of backbone.",
       "footnote": "When funding tightens and staff are cut, all of this collapses back onto one person. Right now, most of their time and money are trapped in back-office work that should be automated.",
       "image": {
-        "type": "infographic",
-        "placeholder": "Infographic showing one person juggling 5 different roles/hats"
+        "type": "photo",
+        "placeholder": "Photorealistic image of overwhelmed nonprofit founder, stressed out, managing 5 different jobs, looking at one phone while talking on a second phone, laptop open with multiple browser tabs, sticky notes everywhere, in a small cluttered office"
       }
     },
     {
@@ -54,8 +54,8 @@
       "highlight": "These leaders don't need another tool. They need a backbone.",
       "footnote": "This hits founders of color especially hard, as equity-era funding retrenches.",
       "image": {
-        "type": "chart",
-        "placeholder": "Chart showing org budget trajectory: growth to $1M, then decline/plateau"
+        "type": "photo",
+        "placeholder": "Photorealistic image of a nonprofit leader alone in a half-empty office, packing boxes, looking exhausted but determined, wall behind shows framed photos of community events and a chart with a line that rose then fell"
       }
     },
     {
@@ -82,8 +82,8 @@
       ],
       "highlight": "A single foundation can unlock Director for an entire cohort of grantees.",
       "image": {
-        "type": "diagram",
-        "placeholder": "Foundation at center connected to 5-10 nonprofit orgs, each with Director backbone"
+        "type": "photo",
+        "placeholder": "Photorealistic image of a foundation program officer in a modern glass office building meeting room, laptop showing a portfolio dashboard, shaking hands with multiple nonprofit leaders visible through glass walls, conveying partnership and scale"
       }
     },
     {
@@ -121,8 +121,8 @@
       "highlight": "68% of nonprofits now use AI (up from 58% in 2023). The market is ready for an AI-native backbone.",
       "footnote": "Sources: Independent Sector, Statista, NCCS, Google for Nonprofits Survey 2025, Intent Market Research",
       "image": {
-        "type": "chart",
-        "placeholder": "TAM/SAM/SOM concentric circles: $164B → $3.5B → $50M"
+        "type": "infographic",
+        "placeholder": "Clean infographic with three concentric circles showing market size: outer ring labeled TAM $164B (all US nonprofit admin spending), middle ring SAM $3.5B (small/mid nonprofits), inner circle SOM $50M (5-year target), with icons representing nonprofits at different scales"
       }
     },
     {
@@ -151,8 +151,8 @@
       "highlight": "There is no integrated, AI-native backbone designed for $400k–$1M orgs that have real relationships but no team.",
       "footnote": "$360–450k/year for the backbone on a fragile budget.",
       "image": {
-        "type": "diagram",
-        "placeholder": "Comparison diagram: scattered SaaS logos vs consultant icons vs expensive staff org chart"
+        "type": "photo",
+        "placeholder": "Photorealistic split image: left side shows chaotic desk with 10+ software logos/tabs open on monitors, middle shows expensive consultant in suit walking away with invoice, right side shows empty desks with 'position unfilled' signs - all conveying broken alternatives"
       }
     },
     {
@@ -182,8 +182,8 @@
       "highlight": "We plug into an existing org and donor base and give them the leadership bench they can't afford to rebuild alone.",
       "callout": "Short term, we're a forward-deployed AI support team. Long term, we're building the autopilot that runs the entire nonprofit back office so a single founder can run a $5M org with almost no internal ops staff.",
       "image": {
-        "type": "diagram",
-        "placeholder": "Two-part diagram: Director OS (software icon) + Director Pod (team icon) = Complete Backbone"
+        "type": "photo",
+        "placeholder": "Photorealistic image of a confident nonprofit founder at a clean modern desk, single elegant dashboard on screen, small supportive team visible in background video call, conveying clarity and capability instead of chaos"
       }
     },
     {
@@ -217,8 +217,8 @@
       ],
       "highlight": "Director is a relationship and revenue engine, not a shot-in-the-dark grant factory.",
       "image": {
-        "type": "diagram",
-        "placeholder": "Funnel diagram: Relationships → Major Gifts → Grants (showing priority order)"
+        "type": "photo",
+        "placeholder": "Photorealistic image of nonprofit founder having coffee with a major donor in a warm, professional setting - genuine human connection, no screens, representing relationship-first fundraising approach"
       }
     },
     {
@@ -254,7 +254,7 @@
       ],
       "image": {
         "type": "infographic",
-        "placeholder": "Scaling diagram: 4 orgs → 8 orgs → 16 orgs → 100+ orgs with AI automation levels"
+        "placeholder": "Clean horizontal timeline infographic showing pod scaling: Year 1 with 4 org icons and small team, Year 2 with 8 org icons, Year 3 with 16 org icons, Year 4+ with 100+ orgs, AI automation percentage increasing at each stage (shown as filling progress bars)"
       }
     },
     {
@@ -282,7 +282,7 @@
       "footnote": "Data flows in from email, calendar, finance systems, docs, and existing CRMs. Over time, Director OS becomes the autopilot layer that runs the nonprofit back office end-to-end.",
       "image": {
         "type": "mockup",
-        "placeholder": "Dashboard mockup showing 4 quadrants: Revenue, Runway, Ops, Narratives"
+        "placeholder": "Clean, modern SaaS dashboard mockup with 4 distinct quadrants: Revenue (donor relationship map with warm/hot indicators), Runway (cash flow chart with 12-month projection), Ops (checklist with green checkmarks), Narratives (board deck preview thumbnail) - minimal, elegant design"
       }
     },
     {
@@ -325,8 +325,8 @@
       ],
       "highlight": "Today: Agents draft, humans decide. Future: Agents execute end-to-end; humans supervise and handle exceptions.",
       "image": {
-        "type": "diagram",
-        "placeholder": "4 AI agent icons with workflow arrows showing data flow between them"
+        "type": "infographic",
+        "placeholder": "Sleek infographic showing 4 AI agents as friendly robot icons: Major Gifts Agent (handshake icon), Finance Agent (calculator icon), Ops Agent (checklist icon), Reporting Agent (document icon) - connected by flowing data lines, with human supervisor figure at center reviewing outputs"
       }
     },
     {
@@ -354,8 +354,8 @@
       ],
       "highlight": "Audacious goal: No nonprofit ever dies because of operations, fundraising, or compliance again — only because the mission is done.",
       "image": {
-        "type": "diagram",
-        "placeholder": "Two-column comparison: Today (human-led pod) vs Future (AI-native autopilot supervising 100+ orgs)"
+        "type": "infographic",
+        "placeholder": "Split infographic: Left side 'Today' shows small team of 4 humans supporting 4 nonprofit icons, Right side 'Future' shows same small team with AI agents surrounding them, supporting 100+ nonprofit icons radiating outward - conveying massive scale increase"
       }
     },
     {
@@ -387,7 +387,7 @@
       "footnote": "As Pods scale, pod-level gross margins expand while keeping human leadership involvement high.",
       "image": {
         "type": "chart",
-        "placeholder": "Side-by-side bar chart: Traditional ($360-450k) vs Director ($180-270k)"
+        "placeholder": "Clean bar chart comparing costs: tall red bar labeled 'Traditional Backbone $360-450k/year' with icons for ED, Ops, Dev, Comms roles, versus shorter green bar labeled 'With Director $180-270k/year' showing ED + Director Pod, with '$100-180k SAVED' callout and arrow"
       }
     },
     {
@@ -419,7 +419,7 @@
       "highlight": "Director sits at this intersection: an AI-native backbone delivered by a lean, forward-deployed team to orgs that cannot justify rebuilding full in-house leadership.",
       "image": {
         "type": "chart",
-        "placeholder": "Two intersecting trend lines: AI capability (rising) meets nonprofit need (rising)"
+        "placeholder": "Elegant chart showing two rising trend lines intersecting at 'NOW': blue line labeled 'AI Agent Capability' rising steeply from 2020-2025, red line labeled 'Nonprofit Operational Pressure' also rising, intersection point highlighted with 'Director' logo at the sweet spot"
       }
     },
     {
@@ -451,8 +451,8 @@
         }
       ],
       "image": {
-        "type": "diagram",
-        "placeholder": "Concentric circles: Inner (existing relationships) → Middle (downshifted orgs) → Outer (funder partnerships)"
+        "type": "infographic",
+        "placeholder": "Concentric circles go-to-market diagram: innermost circle 'Existing Relationships' (2-4 orgs), middle ring 'Downshifted $1M Orgs' showing target segment, outer ring 'Foundation Partnerships' for scale, with arrows showing expansion outward from core"
       }
     },
     {
@@ -487,8 +487,8 @@
         }
       ],
       "image": {
-        "type": "diagram",
-        "placeholder": "Business model flywheel: Retainers → Pod capacity → AI leverage → More orgs"
+        "type": "infographic",
+        "placeholder": "Circular flywheel diagram showing business model: 'Annual Retainers' feeds into 'Pod Capacity Growth' feeds into 'AI Agent Development' feeds into 'Support More Orgs' which loops back - arrows showing momentum building, dollar signs and org icons at each stage"
       }
     },
     {
@@ -523,8 +523,8 @@
       ],
       "highlight": "This structure lets philanthropic dollars flow to under-resourced nonprofits while Director operates as a sustainable, investor-backed business.",
       "image": {
-        "type": "diagram",
-        "placeholder": "Flow diagram: Foundations → HiiiWAV (501c3) → Nonprofits ← Director (services)"
+        "type": "infographic",
+        "placeholder": "Clean flow diagram showing structure: Foundation icons at top flowing dollars down to HiiiWAV 501(c)(3) in center, which grants to Nonprofit org icons below, while Director (shown as service arrows) provides backbone support to the same nonprofits - illustrating philanthropic and service flows"
       }
     },
     {
@@ -556,7 +556,7 @@
       "footnote": "Target raise: ~$1M for 12 months runway. Early org retainers reduce net burn.",
       "image": {
         "type": "photo",
-        "placeholder": "Team headshots or org chart showing 4 founding roles"
+        "placeholder": "Photorealistic image of diverse founding team in a modern co-working space: CEO/Founder at whiteboard sketching product vision, Forward-Deployed Director on video call with nonprofit client, Finance Director reviewing dashboards, Founding Engineer coding - collaborative energy, startup vibe"
       }
     },
     {
@@ -599,7 +599,7 @@
       ],
       "image": {
         "type": "infographic",
-        "placeholder": "Timeline roadmap: Year 1 (4 orgs) → Year 2 (8 orgs) → Year 3 (16 orgs) → Year 4+ (100+ orgs, 90-95% automated)"
+        "placeholder": "Horizontal roadmap timeline with milestones: Year 1 marker shows '4 orgs, v1 OS, prove model', Year 2 shows '8 orgs, hardened agents', Year 3 shows '16-org pods, multiple verticals', Year 4+ shows '100+ orgs, 90-95% automated' with exponential curve rising behind the timeline"
       }
     },
     {
@@ -625,7 +625,7 @@
       "highlight": "Real-world impact through strategic partnerships.",
       "image": {
         "type": "photo",
-        "placeholder": "Collage of logos or photos of the customer organizations"
+        "placeholder": "Photorealistic collage of nonprofit customer organizations in action: HiiiWAV music festival crowd, Alphabet Rockers performing for kids, community gathering at Soul Development event, Prospect Band performing live, artistic shot from Ryan Nicole project - vibrant, impactful imagery"
       }
     }
   ],

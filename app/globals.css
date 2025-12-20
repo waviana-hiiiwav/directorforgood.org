@@ -21,6 +21,27 @@
   --input: 240 5.9% 90%;
   --ring: 240 5.9% 10%;
   --radius: 0.5rem;
+
+  /* Pitch Deck Primary Colors */
+  --purple: #A34DFF;
+  --purple-deep: #A34DFF;
+  --purple-mid: #A34DFF;
+  --purple-light: #A34DFF;
+  
+  /* Pitch Deck Accent Colors */
+  --lime: #99FF69;
+  --lime-dark: #99FF69;
+  --orange: #FF4D16;
+  --orange-dark: #FF4D16;
+  --coral: #FF4D16;
+  
+  /* Pitch Deck Neutrals */
+  --black: #000000;
+  --black-pure: #000000;
+  --gray-dark: #1A1A1A;
+  --gray-mid: #2D2D2D;
+  --white: #FFFFFF;
+  --white-off: #F5F5F5;
 }
 
 @theme inline {
@@ -115,4 +136,150 @@ body {
 
 .newsletter-content li {
   margin-bottom: 0.5rem;
+}
+
+/* OTW Pitch Deck Styles */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxWtrzCoOYzM.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+.silk-bg {
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(123, 45, 142, 0.8) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(90, 24, 154, 0.9) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(157, 78, 221, 0.4) 0%, transparent 70%),
+    linear-gradient(180deg, #3D0066 0%, #1A0033 50%, #0D001A 100%);
+  background-size: cover;
+  position: relative;
+}
+
+.silk-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.silk-waves {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.silk-waves::before,
+.silk-waves::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(123, 45, 142, 0.6) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 70%, rgba(90, 24, 154, 0.7) 0%, transparent 40%);
+  animation: silkWave 20s ease-in-out infinite;
+}
+
+.silk-waves::after {
+  animation-delay: -10s;
+  animation-duration: 25s;
+}
+
+@keyframes silkWave {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.1);
+  }
+}
+
+.headline-display {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+}
+
+.headline-italic {
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.editable {
+  cursor: text;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.editable:hover {
+  background: rgba(192, 255, 14, 0.1);
+  outline: 1px dashed rgba(192, 255, 14, 0.3);
+}
+
+.editable:focus {
+  background: rgba(192, 255, 14, 0.15);
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-purple {
+  background: var(--purple-mid);
+  color: var(--white);
+}
+
+.badge-lime {
+  background: var(--lime);
+  color: var(--black);
+}
+
+.badge-orange {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.quote-mark {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--lime);
 }

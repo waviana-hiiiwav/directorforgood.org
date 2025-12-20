@@ -4,9 +4,11 @@ import { getDeckContent, updateDeckContent, resetDeckContent } from '@/lib/deck-
 import { db } from '@/db';
 import { deckVersions } from '@/db/schema';
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const content = getDeckContent();
+    const { searchParams } = new URL(request.url);
+    const slug = searchParams.get('slug') || 'director';
+    const content = getDeckContent(slug);
     return NextResponse.json(content);
   } catch (error) {
     console.error('Error fetching deck content:', error);
@@ -16,6 +18,8 @@ export async function GET() {
 
 export async function PUT(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const slug = searchParams.get('slug') || 'director';
     const body = await request.json() as { content?: Partial<DeckContent>; description?: string } | Partial<DeckContent>;
     
     // Support both { content, description } format and direct content format
@@ -29,13 +33,14 @@ export async function PUT(request: Request) {
       contentToUpdate = body as Partial<DeckContent>;
     }
     
-    const updatedContent = updateDeckContent(contentToUpdate);
+    const updatedContent = updateDeckContent(contentToUpdate, slug);
     
     // Auto-save version to database
     try {
       await db.insert(deckVersions).values({
         content: updatedContent,
-        description: description || `Manual save at ${new Date().toLocaleString()}`,
+        description: description || `Manual save of ${slug} deck at ${new Date().toLocaleString()}`,
+        // We should add a slug column to deckVersions table in the future
       });
     } catch (dbError) {
       // Log but don't fail the request if version save fails
@@ -49,15 +54,17 @@ export async function PUT(request: Request) {
   }
 }
 
-export async function DELETE() {
+export async function DELETE(request: Request) {
   try {
-    const content = resetDeckContent();
+    const { searchParams } = new URL(request.url);
+    const slug = searchParams.get('slug') || 'director';
+    const content = resetDeckContent(slug);
     
     // Save version before reset
     try {
       await db.insert(deckVersions).values({
         content: content,
-        description: 'Reset to defaults',
+        description: `Reset ${slug} deck to defaults`,
       });
     } catch (dbError) {
       console.error('Failed to save version to database:', dbError);

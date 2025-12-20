@@ -424,15 +424,15 @@ function renderSlide(
 }
 
 // Main Document
-export function DirectorPitchDeck() {
-  const content = getDeckContent();
+export function DirectorPitchDeck(slug: string = 'director') {
+  const content = getDeckContent(slug);
   const orderedSlides = getOrderedSlides(content);
   
   return (
     <Document
-      title="Director Pitch Deck"
+      title={`${content.cover.title} Pitch Deck`}
       author="Director"
-      subject="AI-native backbone for nonprofits"
+      subject={content.cover.tagline}
       keywords="director, nonprofit, AI, operations, fundraising"
     >
       {/* Cover slide is always first */}

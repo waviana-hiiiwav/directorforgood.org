@@ -25,6 +25,7 @@ export interface SlideContent {
   }[];
   teamMembers?: TeamMemberInfo[];
   highlight?: string;
+  callout?: string;
   footnote?: string;
   image?: SlideImage;
 }
@@ -34,6 +35,7 @@ export interface DeckContent {
     title: string;
     tagline: string;
     subtagline: string;
+    oneliner?: string;
     url: string;
   };
   slides: SlideContent[];

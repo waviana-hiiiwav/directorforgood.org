@@ -4,17 +4,20 @@ import { DirectorPitchDeck } from '@/lib/pdf/deck-pdf';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const slug = searchParams.get('slug') || 'director';
+    
     // Generate PDF buffer
-    const pdfBuffer = await renderToBuffer(DirectorPitchDeck());
+    const pdfBuffer = await renderToBuffer(DirectorPitchDeck(slug));
     
     // Return as downloadable PDF
     return new NextResponse(new Uint8Array(pdfBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="Director-Pitch-Deck.pdf"',
+        'Content-Disposition': `attachment; filename="${slug}-Pitch-Deck.pdf"`,
         'Content-Length': pdfBuffer.length.toString(),
       },
     });
