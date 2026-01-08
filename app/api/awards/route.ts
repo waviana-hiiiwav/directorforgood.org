@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/db'
+import { getDbForRequest, getTenantFromRequest } from '@/db/tenanted'
 import { awards, awardRecipients, entities } from '@/db/schema'
 import { desc, eq } from 'drizzle-orm'
 
 export async function GET(req: Request) {
   try {
+    const db = getDbForRequest(req)
     const { searchParams } = new URL(req.url)
     const entityId = searchParams.get('entityId')
     
@@ -54,10 +55,13 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const body = await req.json()
     
     // Create the award
     const [award] = await db.insert(awards).values({
+      orgSlug: tenant.orgSlug,
       slug: body.slug,
       name: body.name,
       awardingEntity: body.awardingEntity || 'Unknown',

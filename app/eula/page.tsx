@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+// EULA page for DirectorForGood
 export const metadata = {
   title: 'End User License Agreement',
   description: 'End User License Agreement for the Financial Operating System (FOS) at DirectorForGood.org',
