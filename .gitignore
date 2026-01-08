@@ -43,6 +43,21 @@ next-env.d.ts
 # drizzle
 /db/migrations/*.sql
 
-# uploads
-/public/uploads/*
-!/public/uploads/.gitkeep
+# secrets
+secrets/
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!redirects.json
+!next-sitemap.config.js
+!data/**/*.json
+
+# history
+.specstory/
+
+# brandkit / large assets
+hiiiwav-impact-report/
+clients/hiiiwav/brandkit/
+public/brands/
+public/reports/hiiiwav-2025/images/

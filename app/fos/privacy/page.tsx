@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Privacy Policy for Financial Operating System (FOS)',
+  title: 'Privacy Policy - Financial Operating System (FOS)',
   description: 'Privacy Policy for the Financial Operating System (FOS) at DirectorForGood.org',
 }
 
 export const dynamic = 'force-dynamic'
 
-export default function PrivacyPage() {
+export default function FOSPrivacyPage() {
   return (
     <div className="bg-black text-white min-h-screen">
       <div className="container px-4 py-16 max-w-4xl mx-auto">
