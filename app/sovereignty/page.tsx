@@ -32,7 +32,14 @@ export default function SovereigntyAIPage() {
       <main className="pt-24 pb-16">
         
         {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
+        <section className="max-w-7xl mx-auto px-6 py-20 lg:py-32 relative overflow-hidden">
+          <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-1605142859862-978be7eba909?auto=format&fit=crop&q=80&w=1000" 
+              alt="Oakland Architecture" 
+              className="object-cover h-full w-full rounded-l-[100px]"
+            />
+          </div>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-6">
@@ -43,7 +50,7 @@ export default function SovereigntyAIPage() {
                   Your data is <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">nobody else&apos;s business.</span>
                 </h1>
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-                Meet <strong className="text-neutral-900">Sovereignty AI</strong> by Director. The first complete AI back-office for small businesses that runs off-grid, protects your financial data, and never trains big corporate models on your struggle.
+                Meet <strong className="text-neutral-900">Sovereignty AI</strong> by Director. Founded and owned by Grammy-winning technologist <strong className="text-neutral-900">Bosko Kante</strong>, we provide a 100% clean energy powered back-office for small businesses that protects your financial data and never trains big corporate models on your struggle.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -59,13 +66,17 @@ export default function SovereigntyAIPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-100 to-transparent rounded-3xl transform rotate-3"></div>
               <div className="bg-white border border-neutral-200 shadow-xl rounded-3xl p-8 relative z-10">
+                <div className="mb-6 overflow-hidden rounded-2xl aspect-square bg-neutral-100 border border-neutral-200">
+                  <img 
+                    src="/images/bosko-kante-headshot.png" 
+                    alt="Bosko Kante" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="flex items-center justify-between mb-8 pb-6 border-b border-neutral-100">
                   <div>
-                    <h3 className="font-bold text-lg">System Status</h3>
-                    <p className="text-sm text-green-600 font-medium flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-green-500 inline-block animate-pulse"></span>
-                      Local Node Active
-                    </p>
+                    <h3 className="font-bold text-lg">Bosko Kante</h3>
+                    <p className="text-sm text-neutral-500">Founder, Sovereignty AI</p>
                   </div>
                   <Shield className="w-8 h-8 text-emerald-500" />
                 </div>
@@ -99,8 +110,16 @@ export default function SovereigntyAIPage() {
         </section>
 
         {/* The Problem / Solution */}
-        <section id="how-it-works" className="bg-black text-white py-24">
-          <div className="max-w-7xl mx-auto px-6">
+        <section id="how-it-works" className="bg-neutral-900 text-white py-24 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <img 
+              src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=2000" 
+              alt="Nature Greenery" 
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">Big Tech wasn&apos;t built for Main Street.</h2>
                 <p className="text-lg text-neutral-400">
@@ -125,7 +144,7 @@ export default function SovereigntyAIPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Graceful Accounting</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">
-                  We don&apos;t red-flag you for using a business card at the grocery store. Our AI understands the realities of small business cash flow, classifying commingled funds cleanly and safely without judgment.
+                  We don&apos;t red-flag you for using a business card at the grocery store. Our AI helps you manage commingled funds without judgment, providing a clear path to clean financial separation as your business grows.
                 </p>
               </div>
 
@@ -143,7 +162,8 @@ export default function SovereigntyAIPage() {
         </section>
 
         {/* The Replacement Stack */}
-        <section className="py-24 max-w-7xl mx-auto px-6">
+        <section className="py-24 max-w-7xl mx-auto px-6 relative">
+          <div className="absolute -left-24 top-1/2 -translate-y-1/2 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-50 -z-10"></div>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Replace the software spaghetti.</h2>
