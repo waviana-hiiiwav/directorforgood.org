@@ -111,7 +111,7 @@ export default function AboutSlide({ slide, onUpdate }: Props) {
               At HiiiWAV, we reject the silos that divide artists from technologists. Instead, we foster a radical ecosystem where Grammy-winning producers, startup founders, engineers, and grassroots organizers collaborate to share resources, mentorship, and opportunities.
             </p>
             <p className="text-sm text-white/80 mb-4">
-              This ethos is embodied by our founding leadership team — <strong className="text-white">Bosko Kante</strong> (Executive Director, Award-winning producer and inventor), <strong className="text-white">Maya Kante</strong>, and <strong className="text-white">Miles Dotson</strong> — who bring decades of experience navigating the frontiers of music, tech, and social impact.
+              This ethos is embodied by our founding leadership team — <strong className="text-white">Bosko Kante</strong> (Executive Director, Grammy-winner, award-winning inventor), <strong className="text-white">Maya Kante</strong>, and <strong className="text-white">Miles Dotson</strong> — who bring decades of experience navigating the frontiers of music, tech, and social impact.
             </p>
             <p className="text-sm text-white/80 mb-6">
               This report celebrates two years of audacious growth, but it is only the beginning. As we look ahead, HiiiWAV remains laser-focused on one question:

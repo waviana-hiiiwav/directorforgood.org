@@ -15,6 +15,20 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'secure.gravatar.com' }
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'liberationintelligence.org',
+          },
+        ],
+        destination: '/liberation',
+      },
+    ]
+  },
   async redirects() {
     if (fs.existsSync(redirectsFile)) {
       const rules = JSON.parse(fs.readFileSync(redirectsFile, 'utf8'))
