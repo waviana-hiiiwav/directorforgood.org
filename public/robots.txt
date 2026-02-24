@@ -5,7 +5,7 @@ Disallow: /admin
 Disallow: /api
 
 # Host
-Host: https://hiiiwav.org
+Host: https://directorforgood.org
 
 # Sitemaps
-Sitemap: https://hiiiwav.org/sitemap.xml
+Sitemap: https://directorforgood.org/sitemap.xml

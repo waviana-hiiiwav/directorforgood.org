@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/db'
+import { getDbForRequest, getTenantFromRequest } from '@/db/tenanted'
 import { entities } from '@/db/schema'
-import { desc } from 'drizzle-orm'
+import { desc, eq } from 'drizzle-orm'
 
-export async function GET() {
+export async function GET(req: Request) {
   try {
-    const allEntities = await db.select().from(entities).orderBy(desc(entities.createdAt))
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
+    const allEntities = await db
+      .select()
+      .from(entities)
+      .where(eq(entities.orgSlug, tenant.orgSlug))
+      .orderBy(desc(entities.createdAt))
     return NextResponse.json(allEntities)
   } catch (error) {
     console.error('Error fetching entities:', error)
@@ -15,9 +21,12 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const body = await req.json()
     
     const [entity] = await db.insert(entities).values({
+      orgSlug: tenant.orgSlug,
       slug: body.slug,
       name: body.name,
       type: body.type,

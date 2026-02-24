@@ -38,14 +38,14 @@ export default function FundingSlide({ slide, onUpdate }: Props) {
   };
 
   // Group funders by threshold, preserving original indices
-  // Specific funders to always include in small group: Kaiser, EBCF
+  // Specific funders to always include in small group: EBCF
   const { majorFunders, smallFunders, smallTotal } = useMemo(() => {
     const funders = content.funders as Funder[];
     const major: Array<Funder & { originalIndex: number }> = [];
     const small: Array<Funder & { originalIndex: number }> = [];
     let total = 0;
 
-    const smallGroupNames = ['Kaiser', 'East Bay Community Foundation'];
+    const smallGroupNames = ['East Bay Community Foundation'];
 
     funders.forEach((funder, index) => {
       const amount = parseAmount(funder.ask);

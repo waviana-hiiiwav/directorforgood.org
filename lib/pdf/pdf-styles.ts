@@ -1,7 +1,8 @@
 import { StyleSheet } from '@react-pdf/renderer';
+import type { PdfTheme } from '@/lib/brandkit/types';
 
-// Color palette - professional monochrome with accent
-export const colors = {
+// Default color palette - professional monochrome with accent
+export const defaultColors = {
   black: '#000000',
   white: '#FFFFFF',
   gray: {
@@ -19,12 +20,16 @@ export const colors = {
   accent: '#3B82F6', // Blue accent for highlights
 };
 
-// Typography
-export const fonts = {
+// Default typography
+export const defaultFonts = {
   heading: 'Helvetica-Bold',
   body: 'Helvetica',
   light: 'Helvetica',
 };
+
+// Export defaults for backward compatibility
+export const colors = defaultColors;
+export const fonts = defaultFonts;
 
 // Slide dimensions (16:9 aspect ratio)
 export const slide = {
@@ -55,68 +60,75 @@ export const spacing = {
   xxl: 24,
 };
 
-// Common styles
-export const styles = StyleSheet.create({
-  // Page/Slide styles
-  page: {
-    width: slide.width,
-    height: slide.height,
-    backgroundColor: colors.black,
-    padding: slide.padding,
-    position: 'relative',
-  },
-  pageLight: {
-    width: slide.width,
-    height: slide.height,
-    backgroundColor: colors.gray[900],
-    padding: slide.padding,
-    position: 'relative',
-  },
+/**
+ * Create PDF styles from a brand theme
+ * If no theme is provided, uses default colors/fonts
+ */
+export function createPdfStyles(theme?: PdfTheme) {
+  const themeColors = theme?.colors || defaultColors;
+  const themeFonts = theme?.fonts || defaultFonts;
   
-  // Typography
-  title: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.title,
-    color: colors.white,
-    marginBottom: spacing.lg,
-  },
-  subtitle: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.subtitle,
-    color: colors.gray[300],
-    marginBottom: spacing.xl,
-    lineHeight: 1.4,
-  },
-  heading: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.heading,
-    color: colors.white,
-    marginBottom: spacing.md,
-  },
-  subheading: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.subheading,
-    color: colors.white,
-    marginBottom: spacing.sm,
-  },
-  body: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.body,
-    color: colors.gray[300],
-    lineHeight: 1.5,
-  },
-  bodyWhite: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.body,
-    color: colors.white,
-    lineHeight: 1.5,
-  },
-  small: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.small,
-    color: colors.gray[400],
-    lineHeight: 1.4,
-  },
+  return StyleSheet.create({
+    // Page/Slide styles
+    page: {
+      width: slide.width,
+      height: slide.height,
+      backgroundColor: themeColors.black || defaultColors.black,
+      padding: slide.padding,
+      position: 'relative',
+    },
+    pageLight: {
+      width: slide.width,
+      height: slide.height,
+      backgroundColor: (themeColors as any).gray?.[900] || defaultColors.gray[900],
+      padding: slide.padding,
+      position: 'relative',
+    },
+    
+    // Typography
+    title: {
+      fontFamily: themeFonts.heading || defaultFonts.heading,
+      fontSize: fontSize.title,
+      color: themeColors.white || defaultColors.white,
+      marginBottom: spacing.lg,
+    },
+    subtitle: {
+      fontFamily: themeFonts.body || defaultFonts.body,
+      fontSize: fontSize.subtitle,
+      color: (themeColors as any).gray?.[300] || defaultColors.gray[300],
+      marginBottom: spacing.xl,
+      lineHeight: 1.4,
+    },
+    heading: {
+      fontFamily: themeFonts.heading || defaultFonts.heading,
+      fontSize: fontSize.heading,
+      color: themeColors.white || defaultColors.white,
+      marginBottom: spacing.md,
+    },
+    subheading: {
+      fontFamily: themeFonts.heading || defaultFonts.heading,
+      fontSize: fontSize.subheading,
+      color: themeColors.white || defaultColors.white,
+      marginBottom: spacing.sm,
+    },
+    body: {
+      fontFamily: themeFonts.body || defaultFonts.body,
+      fontSize: fontSize.body,
+      color: (themeColors as any).gray?.[300] || defaultColors.gray[300],
+      lineHeight: 1.5,
+    },
+    bodyWhite: {
+      fontFamily: themeFonts.body || defaultFonts.body,
+      fontSize: fontSize.body,
+      color: themeColors.white || defaultColors.white,
+      lineHeight: 1.5,
+    },
+    small: {
+      fontFamily: themeFonts.body || defaultFonts.body,
+      fontSize: fontSize.small,
+      color: (themeColors as any).gray?.[400] || defaultColors.gray[400],
+      lineHeight: 1.4,
+    },
   
   // Layout
   row: {
@@ -136,73 +148,73 @@ export const styles = StyleSheet.create({
     flexGrow: 1,
   },
   
-  // Bullets
-  bulletRow: {
-    flexDirection: 'row',
-    marginBottom: 3,
-    alignItems: 'flex-start',
-  },
-  bulletDot: {
-    width: 4,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: colors.white,
-    marginRight: spacing.sm,
-    marginTop: 4,
-  },
-  bulletText: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.body,
-    color: colors.gray[300],
-    lineHeight: 1.4,
-    flex: 1,
-  },
-  
-  // Boxes/Cards
-  card: {
-    backgroundColor: colors.gray[800],
-    borderRadius: 8,
-    padding: spacing.lg,
-    marginBottom: spacing.md,
-  },
-  cardBordered: {
-    backgroundColor: 'transparent',
-    borderWidth: 1,
-    borderColor: colors.gray[700],
-    borderRadius: 8,
-    padding: spacing.lg,
-    marginBottom: spacing.md,
-  },
-  cardHighlight: {
-    backgroundColor: colors.gray[800],
-    borderWidth: 2,
-    borderColor: colors.white,
-    borderRadius: 8,
-    padding: spacing.lg,
-    marginBottom: spacing.md,
-  },
-  
-  // Dividers
-  divider: {
-    height: 1,
-    backgroundColor: colors.gray[700],
-    marginVertical: spacing.lg,
-  },
-  dividerVertical: {
-    width: 4,
-    backgroundColor: colors.white,
-    marginRight: spacing.md,
-  },
-  
-  // Footer/Page number
-  footer: {
-    position: 'absolute',
-    bottom: spacing.lg,
-    right: slide.padding,
-    fontFamily: fonts.body,
-    fontSize: fontSize.tiny,
-    color: colors.gray[500],
-  },
+    // Bullets
+    bulletRow: {
+      flexDirection: 'row',
+      marginBottom: 3,
+      alignItems: 'flex-start',
+    },
+    bulletDot: {
+      width: 4,
+      height: 4,
+      borderRadius: 2,
+      backgroundColor: themeColors.white || defaultColors.white,
+      marginRight: spacing.sm,
+      marginTop: 4,
+    },
+    bulletText: {
+      fontFamily: themeFonts.body || defaultFonts.body,
+      fontSize: fontSize.body,
+      color: (themeColors as any).gray?.[300] || defaultColors.gray[300],
+      lineHeight: 1.4,
+      flex: 1,
+    },
+    
+    // Boxes/Cards
+    card: {
+      backgroundColor: (themeColors as any).gray?.[800] || defaultColors.gray[800],
+      borderRadius: 8,
+      padding: spacing.lg,
+      marginBottom: spacing.md,
+    },
+    cardBordered: {
+      backgroundColor: 'transparent',
+      borderWidth: 1,
+      borderColor: (themeColors as any).gray?.[700] || defaultColors.gray[700],
+      borderRadius: 8,
+      padding: spacing.lg,
+      marginBottom: spacing.md,
+    },
+    cardHighlight: {
+      backgroundColor: (themeColors as any).gray?.[800] || defaultColors.gray[800],
+      borderWidth: 2,
+      borderColor: themeColors.white || defaultColors.white,
+      borderRadius: 8,
+      padding: spacing.lg,
+      marginBottom: spacing.md,
+    },
+    
+    // Dividers
+    divider: {
+      height: 1,
+      backgroundColor: (themeColors as any).gray?.[700] || defaultColors.gray[700],
+      marginVertical: spacing.lg,
+    },
+    dividerVertical: {
+      width: 4,
+      backgroundColor: themeColors.white || defaultColors.white,
+      marginRight: spacing.md,
+    },
+    
+    // Footer/Page number
+    footer: {
+      position: 'absolute',
+      bottom: spacing.lg,
+      right: slide.padding,
+      fontFamily: themeFonts.body || defaultFonts.body,
+      fontSize: fontSize.tiny,
+      color: (themeColors as any).gray?.[500] || defaultColors.gray[500],
+    },
   
   // Two column layout
   twoColumn: {
@@ -223,28 +235,32 @@ export const styles = StyleSheet.create({
     width: '48%',
   },
   
-  // Placeholder styles
-  imagePlaceholder: {
-    backgroundColor: colors.gray[800],
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: colors.gray[700],
-    borderStyle: 'dashed',
-  },
-  
-  // Icon container
-  iconContainer: {
-    width: 48,
-    height: 48,
-    borderRadius: 8,
-    backgroundColor: colors.gray[800],
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: spacing.sm,
-  },
-});
+    // Placeholder styles
+    imagePlaceholder: {
+      backgroundColor: (themeColors as any).gray?.[800] || defaultColors.gray[800],
+      borderRadius: 8,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderWidth: 1,
+      borderColor: (themeColors as any).gray?.[700] || defaultColors.gray[700],
+      borderStyle: 'dashed',
+    },
+    
+    // Icon container
+    iconContainer: {
+      width: 48,
+      height: 48,
+      borderRadius: 8,
+      backgroundColor: (themeColors as any).gray?.[800] || defaultColors.gray[800],
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: spacing.sm,
+    },
+  });
+}
+
+// Default styles for backward compatibility
+export const styles = createPdfStyles();
 
 export default styles;
 

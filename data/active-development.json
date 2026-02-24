@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-XX",
+    "description": "Active development tracking for Director tools and features"
+  },
+  "activeDevelopment": [
+    {
+      "id": "meeting-debrief-agent",
+      "name": "Meeting Debrief Agent",
+      "status": "in-development",
+      "directorRole": "development",
+      "relatedFeatures": ["meeting-debrief"],
+      "notes": "Using Retell AI for voice calls. Agent conducts structured debriefs after funder meetings. Captures key takeaways, commitments, asks, and next steps. Currently testing with HiiiWAV team. Webhook integration for transcript capture.",
+      "lastUpdated": "2025-01-XX",
+      "techStack": ["Retell AI", "GPT-4o", "Next.js API routes"]
+    }
+  ]
+}
+
+
+

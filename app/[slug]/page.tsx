@@ -1,7 +1,8 @@
-import { db } from '@/db'
+import { getDbForRequest, getTenantFromRequest } from '@/db/tenanted'
 import { redirects } from '@/db/schema'
 import { eq, and } from 'drizzle-orm'
 import { notFound, redirect } from 'next/navigation'
+import { headers } from 'next/headers'
 
 export const dynamic = 'force-dynamic'
 
@@ -18,12 +19,19 @@ export default async function Page({ params }: PageProps) {
   }
   
   const path = `/${slug}`
+  const reqHeaders = await headers()
+  const db = getDbForRequest({ headers: reqHeaders })
+  const tenant = getTenantFromRequest({ headers: reqHeaders })
 
-  // Check for redirect
+  // Check for redirect (filtered by org)
   const [redirectRule] = await db
     .select()
     .from(redirects)
-    .where(and(eq(redirects.sourceUrl, path), eq(redirects.enabled, true)))
+    .where(and(
+      eq(redirects.sourceUrl, path),
+      eq(redirects.enabled, true),
+      eq(redirects.orgSlug, tenant.orgSlug)
+    ))
     .limit(1)
 
   if (redirectRule) {

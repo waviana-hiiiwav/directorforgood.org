@@ -1,3 +1,8 @@
+/**
+ * @deprecated Use getDbForRequest() or getDbForTenant() from '@/db/tenanted' instead.
+ * This singleton export is kept for backward compatibility but will use the default DATABASE_URL.
+ * For multi-tenant support, always use the tenanted DB functions.
+ */
 import { drizzle } from 'drizzle-orm/postgres-js'
 import postgres from 'postgres'
 import * as schema from './schema'
@@ -15,4 +20,7 @@ function getDb() {
 }
 
 export const db = getDb()
+
+// Re-export tenanted functions for convenience
+export { getDbForRequest, getDbForTenant, getTenantFromRequest } from './tenanted'
 

@@ -20,7 +20,7 @@ export default function LeadersSlide({ slide, onUpdate }: Props) {
     onUpdate({ ...content, [field]: value });
   };
 
-  const categories = content.categories as Category[];
+  const categories = (content.categories as Category[]) || [];
 
   return (
     <div className="slide bg-[var(--black)]">
@@ -47,22 +47,26 @@ export default function LeadersSlide({ slide, onUpdate }: Props) {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Column - City Leadership with photo */}
           <div>
-            <div className="relative rounded-lg overflow-hidden bg-gray-800/50 h-48 mb-4 flex items-end">
-              <div className="absolute inset-0 flex items-center justify-center text-white/20">
-                [Leadership Photo]
-              </div>
-              <div className="relative z-10 bg-gradient-to-t from-black/80 to-transparent w-full p-4">
-                <span className="text-white font-semibold">{categories[0]?.name}</span>
-              </div>
-            </div>
-            <ul className="space-y-2 text-sm text-white/80">
-              {categories[0]?.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="text-white">•</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {categories[0] && (
+              <>
+                <div className="relative rounded-lg overflow-hidden bg-gray-800/50 h-48 mb-4 flex items-end">
+                  <div className="absolute inset-0 flex items-center justify-center text-white/20">
+                    [Leadership Photo]
+                  </div>
+                  <div className="relative z-10 bg-gradient-to-t from-black/80 to-transparent w-full p-4">
+                    <span className="text-white font-semibold">{categories[0].name}</span>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm text-white/80">
+                  {categories[0].items?.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-white">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
           {/* Right Column - Other categories with speaker photo */}
@@ -74,7 +78,7 @@ export default function LeadersSlide({ slide, onUpdate }: Props) {
                   <span className="font-semibold text-white">{cat.name}</span>
                 </div>
                 <ul className="space-y-1 text-sm text-white/80 ml-5">
-                  {cat.items.map((item, i) => (
+                  {cat.items?.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="text-white/50">•</span>
                       {item}

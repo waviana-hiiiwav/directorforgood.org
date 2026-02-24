@@ -1,60 +1,388 @@
 {
   "cover": {
-    "title": "Oakland Tech Week",
-    "tagline": "Building the Ecosystem Oakland Deserves",
-    "subtagline": "The flagship ecosystem convening for founders, investors, artists, and technologists.",
-    "url": "oaklandtechweek.com"
+    "title": "PHASE II PROPOSAL",
+    "tagline": "TECH WEEK",
+    "subtagline": "2025-2026",
+    "url": "www.hiiiwav.org"
   },
   "slides": [
     {
-      "id": "otw-vision",
-      "title": "The Vision",
-      "subtitle": "Oakland as a global hub for culture and technology.",
-      "sections": [
-        {
-          "heading": "Our Mission",
-          "text": "Oakland Tech Week launched as HiiiWAV's flagship ecosystem convening—bringing together founders, investors, artists, and technologists for collaboration, learning, and community building."
-        }
-      ],
-      "highlight": "Oakland's unique position at the intersection of culture and technology.",
-      "image": {
-        "type": "photo",
-        "placeholder": "Oakland Tech Week Event Photo with diverse crowd"
-      }
+      "id": "cover",
+      "title": "PHASE II",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
     },
     {
-      "id": "otw-outcomes",
-      "title": "Key Outcomes",
-      "subtitle": "Measuring our impact in 2024.",
+      "id": "exec-summary",
+      "title": "Executive Summary",
+      "subtitle": "",
       "sections": [
         {
-          "heading": "Community & Capital",
+          "text": "Oakland Tech Week proved that Oakland can lead the Bay Area in responsible, community-rooted innovation—when the right partners build together. In 2025, HiiiWAV, the Kapor Foundation, Northeastern University Oakland, and the City of Oakland launched a seven-day, citywide convening that surpassed every target: 40+ events, 4,200+ participants, 30+ coalition organizations, and 14 Oakland-aligned startups showcased directly to active investors. It wasn’t a conference—it was the public debut of a durable platform now known as City of Belonging, designed to ensure technology is built with communities, not on top of them.\n\nPhase II (2025–2026) is the scale plan. With a $1.25M two-year budget and $1.05M remaining to raise, we will expand Oakland Tech Week into a year-round ecosystem that strengthens founder pipelines, workforce pathways, and civic-ready responsible AI. Phase II includes: production of Oakland Tech Week 2026 (Nov 15–22, 2026) targeting 60+ events and 6,000+ participants; a year-round accelerator supporting 50 founders; and a $100K prize pool to unlock pilots, customers, and investment. We will also resource coalition backbone capacity and expand initiatives already launched—CR4AI (Community Research Center for Reliable AI), Town Alive activation zones, Laney College’s AI Center of Excellence, A.P.P. Accelerator, and Code Vibes AI certification.\n\nSF Foundation’s investment is catalytic because it strengthens the connective tissue: coalition capacity, neighborhood activations, and an equitable innovation narrative grounded in economic justice. Together, we can turn a remarkable launch into a 5-year, $5M platform that keeps Oakland’s culture, talent, and wealth-building at the center of the AI era."
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "toc",
+      "title": "TABLE OF\nCONTENTS",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "coalition-commitment",
+      "title": "50+ Oakland organizations\ncommitted to building",
+      "subtitle": "A cross-sector table of civic leaders, technologists, investors, and community builders",
+      "sections": [],
+      "footnote": "United by a shared vision: technology built with communities, not on top of them."
+    },
+    {
+      "id": "why-us",
+      "title": "Why This Coalition, Why Now",
+      "subtitle": "",
+      "sections": [],
+      "footnote": "We're not proposing an experiment—we're scaling a proven model with institutional backing."
+    },
+    {
+      "id": "goals-vs-results",
+      "title": "We Said It. We Did It.",
+      "subtitle": "Year 1 goals vs. actual results",
+      "sections": [],
+      "footnote": "These proof points show we're already on the path to our 5-year vision."
+    },
+    {
+      "id": "city-of-belonging",
+      "title": "City of Belonging x\nOakland Tech Week",
+      "subtitle": "From Successful Launch to a $5M Platform for Oakland",
+      "sections": [
+        {
           "items": [
-            "Multiple ecosystem convenings throughout the year",
-            "Connections between Oakland founders and Bay Area investors",
-            "Showcased local innovation to national audiences",
-            "Platform for AFRO AI graduates to present their work",
-            "Foundation for annual Oakland Tech Week tradition"
+            "A multi-year effort to make Oakland a national model for community-rooted innovation",
+            "Anchored by Oakland Tech Week, the Oakland Innovation Coalition, and a responsible AI hub",
+            "Phase I (2025–2026): $1.25M two-year initiative",
+            "5-Year Vision: Grow into a $5M platform for Oakland's creative and tech future"
           ]
         }
       ],
-      "image": {
-        "type": "infographic",
-        "placeholder": "Infographic showing key stats: 500+ attendees, 20+ partners, etc."
-      }
+      "footnote": ""
+    },
+    {
+      "id": "successful-launch",
+      "title": "Successful Launch:\nWhat We Did Together",
+      "subtitle": "Oakland Tech Week 2025: A Movement Launch, Not Just a Week",
+      "sections": [
+        {
+          "items": [
+            "7 days, 40+ events, 4,200+ participants across downtown, neighborhood venues, campuses, and community spaces",
+            "30+ organizations stepping into the Oakland Innovation Coalition",
+            "Theme: \"Community, Culture, & Code: Where Innovation Meets Purpose\" — tech built with communities, not on top of them",
+            "Powered by HiiiWAV, Kapor Foundation, Northeastern University Oakland, and the City of Oakland"
+          ]
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "who-showed-up",
+      "title": "WHO SHOWED UP:\nLeaders Across the Town",
+      "subtitle": "A cross-sector table, in one week",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "moments",
+      "title": "Moments That Defined the Week",
+      "subtitle": "Key convenings that made this feel real",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "culture-tech",
+      "title": "Culture x Tech:\nHiiiWAV Fest & The Voice Pitch",
+      "subtitle": "When the festival became the finale",
+      "sections": [
+        {
+          "items": [
+            "HiiiWAV Fest & The Voice Pitch Finale closed OTW with a street-level mash-up of live music, AI demos, and founder pitches",
+            "Performances by Bosko, The Soul Slappers (from E-40's Tiny Desk), Cofounders The Musical, and HiiiWAV's artist-entrepreneurs",
+            "Workshops in Coding AI music & Video production and 3D Modeling led by Bosko Kante, Lance Coleman and Jabari Ali",
+            "Supported by Hidden Genius, Kingmakers, & HiiiWAV"
+          ]
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "story-kev-choice",
+      "title": "Story: Kev Choice & Choice Scores",
+      "subtitle": "From anxiety about AI to winning an AI innovation prize",
+      "sections": [
+        {
+          "text": "Oakland pianist and rapper Kev Choice entered HiiiWAV's AFRO AI accelerator concerned about what AI would do to musicians.\n\nThrough AFRO AI, he and co-founders Sam Wilkins and Jorge Hernandez built Choice Scores, an AI tool that turns songs into orchestral scores—turning 40-hour tasks into minutes.\n\nAt Oakland Tech Week, Choice Scores presented their product to a room full of investors and potential customers, giving an artist-led creative tech company capital, visibility, and investor connections.\n\nToday, Choice Scores is positioned to help music educators perform independent composers' work live at scale—a concrete example of AI amplifying culture instead of extracting it."
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "story-youth",
+      "title": "Story: Youth, Skills &\n\"You Can't Put a Price on This\"",
+      "subtitle": "Young people building their own creative tech futures",
+      "sections": [
+        {
+          "text": "In HiiiWAV's youth and AFRO AI programs, dozens of young innovators built projects ranging from AI chatbots to AI-prototyped community spaces.\n\nOne AFRO AI summer graduate, Chris, described the experience as gaining skills—from building a chatbot to collaborating in teams—and connections with professionals that \"you can't put a price on.\"\n\nThese same youth and early-career creatives showed up at OTW: volunteering, performing, and testing their ideas in front of real investors and city leaders."
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "story-grand-nationxl",
+      "title": "Story: Leveling Up Local\nCompanies with AI",
+      "subtitle": "Grand Nationxl / The Sauce Agency: workforce development in real time",
+      "sections": [
+        {
+          "text": "To produce HiiiWAV Fest and OTW, HiiiWAV ran a four-month AI workforce development lab with event partners Grand Nationxl / The Sauce Agency.\n\nThey learned to use large language models for vendor communication, budgeting, and marketing copy; advanced Google Sheets for real-time financials; and AI-powered image/video tools for festival content.\n\nResult: local, Black-led companies are now using AI to run more efficient, higher-margin events, not just as a concept—but as part of their day-to-day operations.\n\nThis is the kind of skills transfer and economic mobility City of Belonging is designed to scale."
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "founder-pipeline",
+      "title": "Founder & Startup Pipeline",
+      "subtitle": "14 Oakland-aligned startups on stage, not just in a spreadsheet",
+      "sections": [
+        {
+          "items": [
+            "Startups built direct relationships with investors like Good Trouble Ventures, New Media Ventures, and BLCKVC",
+            "Several founders are now in conversation around term sheets, pilot projects, or partnerships with city and anchor institutions"
+          ]
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "coalition-members",
+      "title": "The Coalition:\nOakland Innovation Coalition",
+      "subtitle": "A real table of organizations, not just logos",
+      "sections": [],
+      "footnote": "This is the backbone we're now resourcing over 2 and then 5 years."
+    },
+    {
+      "id": "early-outcomes",
+      "title": "Early Outcomes for Oakland",
+      "subtitle": "What changed because OTW and City of Belonging launched",
+      "sections": [
+        {
+          "items": [
+            "Stronger collaboration among community-based tech nonprofits",
+            "New responsible AI pilots and a community-driven AI research hub (CR4AI)",
+            "Founder–investor pipelines strengthened via OTW showcases and AFRO AI cohorts",
+            "Increased foot traffic & spending at local businesses during OTW and HiiiWAV Fest",
+            "New workforce and talent programs, including Code Vibes, AFRO AI, and youth labs",
+            "A growing cross-sector coalition aligned around equitable innovation and narrative change"
+          ]
+        }
+      ],
+      "footnote": "These are exactly the outcomes the original City of Belonging proposal predicted—now we have proof points on the ground."
+    },
+    {
+      "id": "stats",
+      "title": "Year 1: By The Numbers",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "initiatives",
+      "title": "What We Built",
+      "subtitle": "6 new initiatives launched — infrastructure that outlasts any single event",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "two-year-vision",
+      "title": "The Two-Year Vision",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "investment",
+      "title": "The Investment",
+      "subtitle": "$1.05M remaining to complete the vision",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "kapor-anchor",
+      "title": "Kapor's Anchor Role:\n$450K of the $1.25M",
+      "subtitle": "Kapor as founding partner of the platform, not just an event sponsor",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "cofunders-table",
+      "title": "The Rest of the Table:\n$800K from Co-Funders",
+      "subtitle": "Inviting peers into a proven initiative",
+      "sections": [
+        {
+          "items": [
+            "Community foundations: SF Foundation, EBCF, SVCF → host support, coalition capacity, neighborhood activations",
+            "Thematic funders: Omidyar Network, Akonadi, New Media Ventures → narrative, responsible AI, civic innovation pilots",
+            "Corporate partners: Block → prize pool, workforce pathways, internships, sponsor-branded OTW days"
+          ]
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "five-year-vision",
+      "title": "The 5-Year Vision:\n$5M Platform",
+      "subtitle": "From a 2-year initiative to a durable City of Belonging",
+      "sections": [
+        {
+          "items": [
+            "5+ OTWs drawing 15,000+ annual attendees, with national and global visitors",
+            "100+ founders/teams supported through accelerators and prizes",
+            "1,000+ artists & youth trained through workshops and residencies",
+            "A recognized \"City of Belonging\" brand that stands for responsible AI, community wealth-building, and Black creativity leading innovation"
+          ]
+        }
+      ],
+      "footnote": "The two-year, $1.25M phase is how we go from a remarkably successful launch to a durable, 5-year platform for Oakland."
+    },
+    {
+      "id": "funding-coalition",
+      "title": "The Funding Coalition",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "budget-plan",
+      "title": "5-Year Budget Trajectory",
+      "subtitle": "$5M Over 5 Years",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "budget-breakdown",
+      "title": "Year 1 Budget Breakdown",
+      "subtitle": "$500K Initial Launch Phase",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "funding-coalition-detailed",
+      "title": "Funding Coalition",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "five-year-roadmap",
+      "title": "5-Year Roadmap",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "why-now",
+      "title": "Why Now",
+      "subtitle": "",
+      "sections": [
+        {
+          "items": [
+            "Proven model — Year 1 exceeded all targets",
+            "Coalition ready — 30+ orgs aligned and eager to scale",
+            "City backing — Mayor Barbara Lee publicly champions the initiative",
+            "AI moment — Oakland positioned as responsible AI alternative",
+            "Momentum — Now is the time to complete the funding coalition"
+          ]
+        }
+      ],
+      "footnote": ""
+    },
+    {
+      "id": "team",
+      "title": "EVENT COMMITTEE",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "cta",
+      "title": "Call to Action",
+      "subtitle": "Complete Year 1. Scale Year 2.",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "closing-quote",
+      "title": "closing-quote",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "hiiilights",
+      "title": "HiiiLIGHTS",
+      "subtitle": "",
+      "sections": [],
+      "footnote": ""
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix",
+      "subtitle": "Supporting Documents",
+      "sections": [],
+      "footnote": ""
     }
   ],
   "slideOrder": [
-    "otw-vision",
-    "otw-outcomes"
+    "cover",
+    "exec-summary",
+    "toc",
+    "coalition-commitment",
+    "why-us",
+    "goals-vs-results",
+    "city-of-belonging",
+    "successful-launch",
+    "who-showed-up",
+    "moments",
+    "culture-tech",
+    "story-kev-choice",
+    "story-youth",
+    "story-grand-nationxl",
+    "founder-pipeline",
+    "coalition-members",
+    "early-outcomes",
+    "stats",
+    "initiatives",
+    "two-year-vision",
+    "investment",
+    "kapor-anchor",
+    "cofunders-table",
+    "five-year-vision",
+    "funding-coalition",
+    "budget-plan",
+    "budget-breakdown",
+    "funding-coalition-detailed",
+    "five-year-roadmap",
+    "why-now",
+    "team",
+    "cta",
+    "closing-quote",
+    "hiiilights",
+    "appendix"
   ],
   "ask": {
-    "amount": "$250k",
+    "amount": "",
     "items": [
-      "Expand OTW 2025 to a full week of city-wide programming",
-      "Build the permanent OTW digital portal",
-      "Support year-round founder/investor matchmaking"
+      "Schedule follow-up conversation",
+      "Review detailed budget",
+      "Confirm partnership by Q1 2026"
     ]
   }
 }
-

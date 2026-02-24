@@ -1,15 +1,20 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/db'
+import { getDbForRequest, getTenantFromRequest } from '@/db/tenanted'
 import { entities } from '@/db/schema'
-import { eq } from 'drizzle-orm'
+import { eq, and } from 'drizzle-orm'
 
 export async function GET(
   req: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const { id } = await params
-    const [entity] = await db.select().from(entities).where(eq(entities.id, parseInt(id)))
+    const [entity] = await db
+      .select()
+      .from(entities)
+      .where(and(eq(entities.id, parseInt(id)), eq(entities.orgSlug, tenant.orgSlug)))
     
     if (!entity) {
       return NextResponse.json({ error: 'Entity not found' }, { status: 404 })
@@ -27,6 +32,8 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const { id } = await params
     const body = await req.json()
     
@@ -45,7 +52,7 @@ export async function PUT(
         active: body.active ?? true,
         updatedAt: new Date(),
       })
-      .where(eq(entities.id, parseInt(id)))
+      .where(and(eq(entities.id, parseInt(id)), eq(entities.orgSlug, tenant.orgSlug)))
       .returning()
     
     if (!entity) {
@@ -64,8 +71,10 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const { id } = await params
-    await db.delete(entities).where(eq(entities.id, parseInt(id)))
+    await db.delete(entities).where(and(eq(entities.id, parseInt(id)), eq(entities.orgSlug, tenant.orgSlug)))
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Error deleting entity:', error)

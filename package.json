@@ -26,12 +26,14 @@
     "seed:directors": "tsx scripts/seed-directors.ts",
     "seed:entities": "tsx scripts/seed-entities.ts",
     "seed:proposal": "tsx scripts/seed-hiiiwav-proposal.ts",
+    "sync-otw": "tsx scripts/sync-otw-deck.ts",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^2.0.44",
     "@ai-sdk/openai": "^2.0.67",
     "@ai-sdk/react": "^2.0.93",
+    "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^5.2.2",
     "@neondatabase/serverless": "^1.0.2",
     "@radix-ui/react-slot": "^1.2.4",
@@ -49,6 +51,7 @@
     "framer-motion": "^12.23.26",
     "googleapis": "^169.0.0",
     "gray-matter": "^4.0.3",
+    "gsap": "^3.14.2",
     "lucide-react": "^0.553.0",
     "next": "^16.0.8",
     "next-auth": "^5.0.0-beta.30",
@@ -80,7 +83,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
     "tailwindcss": "^4",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

@@ -11,14 +11,16 @@ interface Props {
 export default function AboutSlide({ slide, onUpdate }: Props) {
   const { content } = slide;
 
+  const milestones = (content.milestones as string[]) || [];
+
   const updateField = (field: string, value: string | string[]) => {
     onUpdate({ ...content, [field]: value });
   };
 
   const updateMilestone = (index: number, value: string) => {
-    const milestones = [...(content.milestones as string[])];
-    milestones[index] = value;
-    updateField('milestones', milestones);
+    const newMilestones = [...milestones];
+    newMilestones[index] = value;
+    updateField('milestones', newMilestones);
   };
 
   return (
@@ -34,13 +36,11 @@ export default function AboutSlide({ slide, onUpdate }: Props) {
           <div className="h-px bg-[var(--orange)] mb-8" />
 
           {/* Title */}
-          <h1 className="headline-display text-5xl text-white mb-6">
-            <span className="text-white">Hiii</span>
+          <h1 className="headline-display text-5xl text-white mb-6 uppercase">
             <EditableText
-              value="LIGHTS"
-              onChange={(v) => updateField('title', 'Hiii' + v)}
+              value={content.title as string || 'HiiiLIGHTS'}
+              onChange={(v) => updateField('title', v)}
               className="text-[var(--lime)]"
-              tag="span"
             />
           </h1>
 
@@ -79,7 +79,11 @@ export default function AboutSlide({ slide, onUpdate }: Props) {
               <li className="flex items-start gap-2 text-sm text-white/90">
                 <span className="text-white">•</span>
                 <span>
-                  <strong className="text-white">Securing a permanent home for creatives in Oakland:</strong> We purchased our building, establishing a dynamic hub for collaboration, creation, and community power-building.
+                  <EditableText
+                    value={milestones[0] || ''}
+                    onChange={(v) => updateMilestone(0, v)}
+                    multiline
+                  />
                 </span>
               </li>
             </ul>
@@ -89,7 +93,7 @@ export default function AboutSlide({ slide, onUpdate }: Props) {
         {/* Right Column - Milestones */}
         <div className="w-1/2 bg-[var(--purple-mid)] p-8 flex flex-col">
           <ul className="space-y-4">
-            {(content.milestones as string[]).slice(1).map((milestone, i) => (
+            {milestones.slice(1).map((milestone, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-white/90">
                 <span className="text-white">•</span>
                 <EditableText
@@ -107,7 +111,7 @@ export default function AboutSlide({ slide, onUpdate }: Props) {
               At HiiiWAV, we reject the silos that divide artists from technologists. Instead, we foster a radical ecosystem where Grammy-winning producers, startup founders, engineers, and grassroots organizers collaborate to share resources, mentorship, and opportunities.
             </p>
             <p className="text-sm text-white/80 mb-4">
-              This ethos is embodied by our founding leadership team — <strong className="text-white">Bosko Kante</strong> (Executive Director, Grammy-winner, award-winning inventor), <strong className="text-white">Maya Kante</strong>, and <strong className="text-white">Miles Dotson</strong> — who bring decades of experience navigating the frontiers of music, tech, and social impact.
+              This ethos is embodied by our founding leadership team — <strong className="text-white">Bosko Kante</strong> (Executive Director, Award-winning producer and inventor), <strong className="text-white">Maya Kante</strong>, and <strong className="text-white">Miles Dotson</strong> — who bring decades of experience navigating the frontiers of music, tech, and social impact.
             </p>
             <p className="text-sm text-white/80 mb-6">
               This report celebrates two years of audacious growth, but it is only the beginning. As we look ahead, HiiiWAV remains laser-focused on one question:

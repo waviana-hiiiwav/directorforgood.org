@@ -3,7 +3,108 @@
  * 
  * This file contains structured information about Director
  * that the chatbot uses to answer visitor questions.
+ * 
+ * The pitch deck content is dynamically loaded from deck-content.json
+ * so the chatbot always has the latest information.
  */
+
+import { getDeckContent } from './deck-content-server';
+import { FDD_TOOLS_PROMPT, getQuickReferenceText } from './fdd-tools';
+
+/**
+ * Convert deck-content.json to readable text for the chatbot
+ */
+export function getDeckContentAsText(): string {
+  const deck = getDeckContent();
+  
+  let text = `================================================================================
+DIRECTOR PITCH DECK
+================================================================================
+
+TITLE: ${deck.cover.title}
+TAGLINE: ${deck.cover.tagline}
+SUBTAGLINE: ${deck.cover.subtagline}
+${deck.cover.oneliner ? `ONE-LINER: ${deck.cover.oneliner}\n` : ''}WEBSITE: ${deck.cover.url}
+
+`;
+
+  // Convert each slide in order
+  const slideOrder = deck.slideOrder || deck.slides.map((s: { id: string }) => s.id);
+  let slideNum = 1;
+  
+  for (const slideId of slideOrder) {
+    const slide = deck.slides.find((s: { id: string }) => s.id === slideId);
+    if (!slide) continue;
+    
+    text += `================================================================================
+SLIDE ${slideNum}: ${slide.title}
+================================================================================
+
+`;
+    
+    if (slide.subtitle) {
+      text += `${slide.subtitle}\n\n`;
+    }
+    
+    // Handle sections
+    if (slide.sections) {
+      for (const section of slide.sections) {
+        if (section.heading) {
+          text += `${section.heading}\n`;
+        }
+        if (section.text) {
+          text += `${section.text}\n`;
+        }
+        if (section.items) {
+          for (const item of section.items) {
+            text += `• ${item}\n`;
+          }
+        }
+        text += '\n';
+      }
+    }
+    
+    // Handle team members (for team slide)
+    if (slide.teamMembers) {
+      text += `TEAM:\n`;
+      for (const member of slide.teamMembers) {
+        text += `${member.name} – ${member.role}\n`;
+        if (member.bio) {
+          text += `${member.bio}\n`;
+        }
+        text += '\n';
+      }
+    }
+    
+    if (slide.highlight) {
+      text += `HIGHLIGHT: ${slide.highlight}\n\n`;
+    }
+    
+    if (slide.callout) {
+      text += `CALLOUT: ${slide.callout}\n\n`;
+    }
+    
+    if (slide.footnote) {
+      text += `NOTE: ${slide.footnote}\n\n`;
+    }
+    
+    slideNum++;
+  }
+  
+  // Add the ask
+  if (deck.ask) {
+    text += `================================================================================
+THE ASK: ${deck.ask.amount}
+================================================================================
+
+`;
+    for (const item of deck.ask.items) {
+      text += `• ${item}\n`;
+    }
+  }
+  
+  return text;
+}
 
 export const DIRECTOR_FAQ = `
 # Director Knowledge Base
@@ -96,7 +197,14 @@ Yes, Director is raising $1M to fund 12+ months of lean team and product develop
 - Pitch deck: directorforgood.org/deck
 `;
 
-export const CHATBOT_SYSTEM_PROMPT = `You are Director's helpful AI assistant. Your job is to help visitors learn about Director, our AI-native backbone service for nonprofits, and how they can work with us.
+/**
+ * Build the chatbot system prompt dynamically
+ * This reads from deck-content.json so changes are automatically reflected
+ */
+export function getChatbotSystemPrompt(): string {
+  const pitchDeckContent = getDeckContentAsText();
+  
+  return `You are Director's helpful AI assistant. Your job is to help visitors learn about Director, our AI-native backbone service for nonprofits, and how they can work with us.
 
 PERSONALITY:
 - Be professional, knowledgeable, and helpful
@@ -113,4 +221,28 @@ GUIDELINES:
 
 ${DIRECTOR_FAQ}
 
+## Full Pitch Deck Reference
+
+${pitchDeckContent}
+
+## FDD Tools Database
+
+When asked about tools, software recommendations, or how to set up operations for a nonprofit, use this tools database:
+
+${getQuickReferenceText()}
+
+For detailed tool information, refer to the full tools database:
+
+${FDD_TOOLS_PROMPT}
+
 If someone asks about something not covered here, kindly let them know and suggest they email info@directorforgood.org for more information.`;
+}
+
+// Keep backward compatibility - export a static version for any code that imports CHATBOT_SYSTEM_PROMPT directly
+// Note: This will be evaluated once at module load time, so prefer using getChatbotSystemPrompt() for dynamic content
+export const CHATBOT_SYSTEM_PROMPT = getChatbotSystemPrompt();
+
+
+
+
+

@@ -48,7 +48,7 @@ export default function IntroSlide({ slide, onUpdate }: Props) {
 
         {/* Bullets */}
         <ul className="space-y-4 mb-8 max-w-2xl">
-          {(content.bullets as string[]).map((bullet, i) => (
+          {(content.bullets as string[] || []).map((bullet, i) => (
             <li key={i} className="flex items-start gap-3">
               <span className="text-white mt-1">•</span>
               <EditableText

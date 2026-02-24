@@ -1,0 +1,337 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-28",
+    "description": "Annual compliance and tax requirements for California 501(c)(3) nonprofits based in Oakland",
+    "notes": "Due dates vary by fiscal year end. Assumes calendar year (Dec 31) fiscal year unless noted."
+  },
+  "requirements": [
+    {
+      "id": "irs-990",
+      "title": "IRS Form 990 (or 990-EZ/990-N)",
+      "description": "Annual federal tax return for tax-exempt organizations. Form depends on gross receipts: 990-N (e-Postcard) for <$50K, 990-EZ for $50K-$200K, full 990 for >$200K or assets >$500K.",
+      "directorRole": "finance",
+      "frequency": "annual",
+      "dueDate": "May 15",
+      "dueDateNotes": "15th day of 5th month after fiscal year end. Can file 6-month extension (Form 8868).",
+      "penalty": "Late filing penalty of $20/day (up to $10,500 or 5% of gross receipts). Auto-revocation after 3 consecutive years of non-filing.",
+      "filingMethod": "IRS e-file or mail",
+      "resources": [
+        "https://www.irs.gov/forms-pubs/about-form-990",
+        "https://www.irs.gov/charities-non-profits/annual-electronic-filing-requirement-for-small-exempt-organizations-form-990-n-e-postcard"
+      ]
+    },
+    {
+      "id": "ca-form-199",
+      "title": "California Form 199 (or 199N)",
+      "description": "California Franchise Tax Board annual return for tax-exempt organizations. Form 199N (e-Postcard) for gross receipts normally ≤$50K, full Form 199 for larger organizations.",
+      "directorRole": "finance",
+      "frequency": "annual",
+      "dueDate": "May 15",
+      "dueDateNotes": "15th day of 5th month after fiscal year end. Automatic 6-month extension available.",
+      "penalty": "Minimum $10, or $20/month (max 6 months). Possible suspension of tax-exempt status.",
+      "filingMethod": "CalFile (FTB website) or mail",
+      "resources": [
+        "https://www.ftb.ca.gov/forms/misc/199.html"
+      ]
+    },
+    {
+      "id": "ca-rrf-1",
+      "title": "RRF-1 (Registration Renewal Fee Report)",
+      "description": "Annual registration renewal with CA Attorney General's Registry of Charitable Trusts. Required for all charities registered to solicit donations in California. Filed with Form 990 copy.",
+      "directorRole": "ops",
+      "secondaryDirector": "finance",
+      "frequency": "annual",
+      "dueDate": "4 months 15 days after fiscal year end",
+      "dueDateNotes": "For calendar year orgs: May 15. Must include copy of IRS Form 990 and annual fee ($25-$1,200 based on revenue).",
+      "penalty": "Late fees, potential loss of charitable solicitation rights, listing as delinquent on AG website.",
+      "filingMethod": "Registry of Charitable Trusts online portal",
+      "resources": [
+        "https://oag.ca.gov/charities/renewals",
+        "https://rct.doj.ca.gov/"
+      ]
+    },
+    {
+      "id": "ca-si-100",
+      "title": "Statement of Information (SI-100 or SI-100 NP)",
+      "description": "Biennial filing with California Secretary of State to confirm corporate officers, directors, and registered agent. Due every 2 years during registration anniversary month.",
+      "directorRole": "ops",
+      "frequency": "biennial",
+      "dueDate": "Registration anniversary month",
+      "dueDateNotes": "Due during the applicable filing period (your incorporation anniversary). Check SOS website for exact dates.",
+      "penalty": "$250 penalty. Risk of administrative dissolution/suspension after continued non-compliance.",
+      "filingMethod": "California Secretary of State online (bizfile)",
+      "resources": [
+        "https://www.sos.ca.gov/business-programs/business-entities/statements"
+      ]
+    },
+    {
+      "id": "oakland-business-tax",
+      "title": "City of Oakland Business Tax Certificate",
+      "description": "Annual business tax renewal for all businesses operating in Oakland. Nonprofits may qualify for exemption but must still file. Tax amount based on gross receipts.",
+      "directorRole": "ops",
+      "secondaryDirector": "finance",
+      "frequency": "annual",
+      "dueDate": "March 1",
+      "dueDateNotes": "Annual renewal due March 1 for prior calendar year. New businesses register within 60 days of starting operations.",
+      "penalty": "10% penalty per month for late payment (up to 100% of tax). Additional interest charges.",
+      "filingMethod": "City of Oakland Finance Department (online or mail)",
+      "resources": [
+        "https://www.oaklandca.gov/topics/business-tax"
+      ]
+    },
+    {
+      "id": "board-meetings",
+      "title": "Minimum Board Meetings",
+      "description": "California Nonprofit Corporation Law requires at least one annual meeting of the board of directors. Best practice is quarterly meetings. Annual meeting should include officer elections and approval of prior year financials.",
+      "directorRole": "executive",
+      "frequency": "annual",
+      "dueDate": "Per bylaws (typically Q4 or Q1)",
+      "dueDateNotes": "Check your bylaws for specific requirements. Many bylaws require quarterly meetings. Annual meeting typically includes: officer elections, financial review, strategic planning.",
+      "penalty": "No direct penalty, but lack of governance documentation can jeopardize tax-exempt status and increase liability for directors.",
+      "filingMethod": "N/A - maintain meeting minutes",
+      "resources": [
+        "California Corporations Code Section 5210"
+      ]
+    },
+    {
+      "id": "1099-nec",
+      "title": "Form 1099-NEC for Contractors",
+      "description": "File 1099-NEC for each contractor paid $600+ during the year. Required for most non-corporate payments for services.",
+      "directorRole": "finance",
+      "frequency": "annual",
+      "dueDate": "January 31",
+      "dueDateNotes": "Due to IRS and recipients by January 31 for prior calendar year.",
+      "penalty": "$60-$310 per form for late filing (varies by how late). Higher penalties for intentional disregard.",
+      "filingMethod": "IRS e-file (FIRE system) or mail",
+      "resources": [
+        "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+      ]
+    },
+    {
+      "id": "w2-forms",
+      "title": "W-2 Forms for Employees",
+      "description": "Provide W-2 wage statements to all employees for the prior calendar year.",
+      "directorRole": "finance",
+      "frequency": "annual",
+      "dueDate": "January 31",
+      "dueDateNotes": "Due to employees and SSA by January 31.",
+      "penalty": "$60-$310 per form for late filing.",
+      "filingMethod": "SSA Business Services Online or mail",
+      "resources": [
+        "https://www.irs.gov/forms-pubs/about-form-w-2"
+      ]
+    },
+    {
+      "id": "ca-de-9",
+      "title": "California Quarterly Payroll Tax Returns (DE 9/DE 9C)",
+      "description": "Quarterly state payroll tax returns for unemployment insurance, employment training tax, and state disability insurance.",
+      "directorRole": "finance",
+      "frequency": "quarterly",
+      "dueDate": "Last day of month following quarter end",
+      "dueDateNotes": "Q1: April 30, Q2: July 31, Q3: October 31, Q4: January 31",
+      "penalty": "10% penalty plus interest for late payment.",
+      "filingMethod": "EDD e-Services for Business",
+      "resources": [
+        "https://edd.ca.gov/Payroll_Taxes/"
+      ]
+    },
+    {
+      "id": "irs-941",
+      "title": "IRS Form 941 (Quarterly Payroll Tax)",
+      "description": "Quarterly federal payroll tax return reporting Social Security, Medicare, and withheld income taxes.",
+      "directorRole": "finance",
+      "frequency": "quarterly",
+      "dueDate": "Last day of month following quarter end",
+      "dueDateNotes": "Q1: April 30, Q2: July 31, Q3: October 31, Q4: January 31",
+      "penalty": "Failure-to-file penalty of 5%/month (max 25%). Trust fund recovery penalty for willful non-payment.",
+      "filingMethod": "IRS e-file or mail",
+      "resources": [
+        "https://www.irs.gov/forms-pubs/about-form-941"
+      ]
+    },
+    {
+      "id": "workers-comp-insurance",
+      "title": "Workers' Compensation Insurance",
+      "description": "California requires workers' compensation insurance for all employers with employees. Policy must remain active continuously.",
+      "directorRole": "ops",
+      "secondaryDirector": "finance",
+      "frequency": "annual",
+      "dueDate": "Policy renewal date (varies)",
+      "dueDateNotes": "Maintain continuous coverage. Annual audit typically required to reconcile premiums with actual payroll.",
+      "penalty": "Stop-work order, penalty up to $10,000 or double premium (whichever greater). Criminal misdemeanor charges possible.",
+      "filingMethod": "Through insurance broker/carrier",
+      "resources": [
+        "https://www.dir.ca.gov/dwc/workerscompensation.htm"
+      ]
+    },
+    {
+      "id": "dno-insurance",
+      "title": "Directors & Officers (D&O) Insurance",
+      "description": "Protects board members and officers from personal liability for decisions made on behalf of the organization. Not legally required but strongly recommended.",
+      "directorRole": "ops",
+      "frequency": "annual",
+      "dueDate": "Policy renewal date (varies)",
+      "dueDateNotes": "Review coverage limits annually. Ensure coverage aligns with organizational risk.",
+      "penalty": "No legal penalty, but personal liability exposure for board members.",
+      "filingMethod": "Through insurance broker",
+      "resources": []
+    },
+    {
+      "id": "general-liability-insurance",
+      "title": "General Liability Insurance",
+      "description": "Coverage for third-party injuries and property damage. Often required by funders, venues, and partners.",
+      "directorRole": "ops",
+      "frequency": "annual",
+      "dueDate": "Policy renewal date (varies)",
+      "dueDateNotes": "Many grants and venue contracts require proof of insurance.",
+      "penalty": "No legal penalty, but may be unable to receive grants or host events.",
+      "filingMethod": "Through insurance broker",
+      "resources": []
+    },
+    {
+      "id": "annual-report-to-board",
+      "title": "Annual Financial Report to Board",
+      "description": "Present audited or reviewed financial statements to the board. Required by CA law for organizations with gross revenues over $2 million (audit) or over certain thresholds for review.",
+      "directorRole": "finance",
+      "frequency": "annual",
+      "dueDate": "Within 9 months of fiscal year end",
+      "dueDateNotes": "For calendar year orgs: by September 30. Organizations with >$2M gross revenue need independent audit. $500K-$2M need independent review.",
+      "penalty": "Failure to comply can result in AG enforcement action.",
+      "filingMethod": "N/A - present to board",
+      "resources": [
+        "https://oag.ca.gov/charities/audit-requirements"
+      ]
+    },
+    {
+      "id": "conflict-of-interest-disclosures",
+      "title": "Annual Conflict of Interest Disclosures",
+      "description": "Board members and officers should complete annual conflict of interest disclosure forms. Required by best practices and often by funders.",
+      "directorRole": "executive",
+      "secondaryDirector": "ops",
+      "frequency": "annual",
+      "dueDate": "Beginning of fiscal year or at annual board meeting",
+      "dueDateNotes": "Typically collected at annual meeting. Keep on file for audit purposes.",
+      "penalty": "No direct penalty, but lack of policy/disclosures can jeopardize grants and tax-exempt status.",
+      "filingMethod": "Internal documentation",
+      "resources": []
+    },
+    {
+      "id": "charitable-solicitation-other-states",
+      "title": "Charitable Solicitation Registration (Multi-State)",
+      "description": "If soliciting donations from residents of other states, registration may be required in those states. Requirements vary by state.",
+      "directorRole": "development",
+      "secondaryDirector": "ops",
+      "frequency": "annual",
+      "dueDate": "Varies by state",
+      "dueDateNotes": "Common states requiring registration: NY, PA, FL, IL, WA, and others. Use the Unified Registration Statement where accepted.",
+      "penalty": "Varies by state - fines, cease-and-desist orders, loss of ability to solicit.",
+      "filingMethod": "Individual state portals or unified filing services",
+      "resources": [
+        "https://www.nasconet.org/",
+        "https://www.multistatefiling.org/"
+      ]
+    },
+    {
+      "id": "lobbying-disclosure",
+      "title": "Lobbying Activity Disclosure (Form 5768 election)",
+      "description": "If the organization engages in lobbying, track expenditures. 501(h) election allows clearer limits. Report on Form 990 Schedule C.",
+      "directorRole": "executive",
+      "frequency": "annual",
+      "dueDate": "With Form 990",
+      "dueDateNotes": "Track lobbying expenditures throughout the year. Report on Schedule C of Form 990.",
+      "penalty": "Excess lobbying can result in excise tax (25%) or loss of tax-exempt status.",
+      "filingMethod": "Part of Form 990",
+      "resources": [
+        "https://www.irs.gov/charities-non-profits/lobbying"
+      ]
+    },
+    {
+      "id": "records-retention",
+      "title": "Records Retention Policy Compliance",
+      "description": "Maintain required corporate records: articles, bylaws, board minutes, financial records, employment records, contracts. Follow retention schedule.",
+      "directorRole": "ops",
+      "frequency": "ongoing",
+      "dueDate": "Ongoing",
+      "dueDateNotes": "Corporate records: permanent. Financial records: 7 years. Employment records: 4-7 years depending on type.",
+      "penalty": "Potential issues with audits, legal discovery, and regulatory compliance.",
+      "filingMethod": "Internal documentation",
+      "resources": []
+    },
+    {
+      "id": "grant-reporting",
+      "title": "Grant Reporting Deadlines",
+      "description": "Submit required progress and financial reports to funders per grant agreement terms.",
+      "directorRole": "program",
+      "secondaryDirector": "development",
+      "frequency": "varies",
+      "dueDate": "Per grant agreement",
+      "dueDateNotes": "Track each grant's reporting requirements separately. Typical: interim and final reports.",
+      "penalty": "Potential clawback of funds, ineligibility for future funding.",
+      "filingMethod": "Funder portals or email",
+      "resources": []
+    }
+  ],
+  "complianceCalendar": {
+    "january": [
+      { "requirementId": "1099-nec", "dueDate": "Jan 31" },
+      { "requirementId": "w2-forms", "dueDate": "Jan 31" },
+      { "requirementId": "irs-941", "dueDate": "Jan 31", "notes": "Q4 of prior year" },
+      { "requirementId": "ca-de-9", "dueDate": "Jan 31", "notes": "Q4 of prior year" }
+    ],
+    "march": [
+      { "requirementId": "oakland-business-tax", "dueDate": "Mar 1" }
+    ],
+    "april": [
+      { "requirementId": "irs-941", "dueDate": "Apr 30", "notes": "Q1" },
+      { "requirementId": "ca-de-9", "dueDate": "Apr 30", "notes": "Q1" }
+    ],
+    "may": [
+      { "requirementId": "irs-990", "dueDate": "May 15", "notes": "Calendar year filers" },
+      { "requirementId": "ca-form-199", "dueDate": "May 15", "notes": "Calendar year filers" },
+      { "requirementId": "ca-rrf-1", "dueDate": "May 15", "notes": "Calendar year filers" }
+    ],
+    "july": [
+      { "requirementId": "irs-941", "dueDate": "Jul 31", "notes": "Q2" },
+      { "requirementId": "ca-de-9", "dueDate": "Jul 31", "notes": "Q2" }
+    ],
+    "september": [
+      { "requirementId": "annual-report-to-board", "dueDate": "Sep 30", "notes": "Calendar year filers" }
+    ],
+    "october": [
+      { "requirementId": "irs-941", "dueDate": "Oct 31", "notes": "Q3" },
+      { "requirementId": "ca-de-9", "dueDate": "Oct 31", "notes": "Q3" }
+    ]
+  },
+  "directorResponsibilities": {
+    "finance": [
+      "irs-990",
+      "ca-form-199",
+      "1099-nec",
+      "w2-forms",
+      "ca-de-9",
+      "irs-941",
+      "annual-report-to-board"
+    ],
+    "ops": [
+      "ca-rrf-1",
+      "ca-si-100",
+      "oakland-business-tax",
+      "workers-comp-insurance",
+      "dno-insurance",
+      "general-liability-insurance",
+      "records-retention"
+    ],
+    "executive": [
+      "board-meetings",
+      "conflict-of-interest-disclosures",
+      "lobbying-disclosure"
+    ],
+    "development": [
+      "charitable-solicitation-other-states"
+    ],
+    "program": [
+      "grant-reporting"
+    ]
+  }
+}

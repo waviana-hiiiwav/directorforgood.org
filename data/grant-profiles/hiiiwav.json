@@ -1,0 +1,182 @@
+{
+  "organization": {
+    "legalName": "HiiiWAV",
+    "dbaName": null,
+    "ein": "NEEDS_INPUT",
+    "taxStatus": "501(c)(3)",
+    "yearFounded": "2020",
+    "website": "https://hiiiwav.org",
+    "address": {
+      "street": "2181 Telegraph Ave",
+      "city": "Oakland",
+      "state": "CA",
+      "zip": "94612",
+      "country": "USA"
+    },
+    "contact": {
+      "primaryEmail": "info@hiiiwav.org",
+      "fundEmail": "fund@hiiiwav.org",
+      "phone": "323-481-7372",
+      "socialMedia": {
+        "instagram": "@hiiiwav",
+        "youtube": "@hiiiwav"
+      }
+    }
+  },
+  "leadership": {
+    "executiveDirector": {
+      "name": "Bosko Kante",
+      "title": "Cofounder & President",
+      "email": "bosko@hiiiwav.org"
+    },
+    "boardSize": "NEEDS_INPUT",
+    "staffSize": "NEEDS_INPUT"
+  },
+  "mission": {
+    "short": "Oakland's creative tech incubator empowering artists to become successful entrepreneurs through technology, mentorship, and community support.",
+    "full": "HiiiWAV is a visionary Black-led organization innovating at the intersection of art and technology to confront the systemic exclusion and exploitation that have long shaped the entertainment and media industries. In cultural hubs like Oakland—where rising costs, lack of access to capital, and now AI-driven disruption threaten the survival of independent creators—we exist to dismantle these barriers and build new pathways to ownership and sustainability.",
+    "vision": "An Oakland where creativity thrives and ownership is the norm."
+  },
+  "description": {
+    "short": "HiiiWAV provides artists, activists, and creators with the tools, mentorship, and community they need to build successful tech-enabled ventures.",
+    "full": "HiiiWAV is Oakland's creative tech incubator. We empower artists to become successful entrepreneurs through technology, mentorship, and community support. Our programs include Code Vibes (teaching creators to build AI-powered tools), Joint Ventures (fiscal sponsorship and partnership for artists), and community events like Oakland Tech Week and HiiiWAV FEST. We provide infrastructure for independent creators to build sustainable careers while maintaining ownership of their work."
+  },
+  "programs": [
+    {
+      "name": "Code Vibes",
+      "description": "8-week flagship program teaching creators, activists, and changemakers how to build AI-powered tools and software agents that serve their communities. No coding experience required. FREE for accepted applicants.",
+      "budget": "NEEDS_INPUT",
+      "served": "NEEDS_INPUT"
+    },
+    {
+      "name": "Joint Ventures / HiiiFrequency",
+      "description": "Boutique, label-like partnerships with artists and organizations. Provides fiscal sponsorship, back-office support, and access to HiiiWAV's network of artists, founders, funders, and creative technologists.",
+      "currentPartners": [
+        "Choice Scores (Kev Choice)",
+        "Ryan Nicole",
+        "Prospect Band",
+        "Alphabet Rockers",
+        "Sol Affirmations",
+        "Soul Slappers"
+      ],
+      "budget": "NEEDS_INPUT",
+      "served": "NEEDS_INPUT"
+    },
+    {
+      "name": "Oakland Tech Week",
+      "description": "City-wide celebration of Oakland's tech and creative communities featuring panels, workshops, demos, performances, and parties across venues throughout Oakland. HiiiWAV is a key partner and producer.",
+      "budget": "NEEDS_INPUT",
+      "served": "NEEDS_INPUT"
+    },
+    {
+      "name": "HiiiWAV FEST",
+      "description": "Signature festival celebrating the intersection of music, art, technology, and community. Features live performances from Joint Venture artists, panels on creative technology, workshops, and community gatherings.",
+      "budget": "NEEDS_INPUT",
+      "served": "NEEDS_INPUT"
+    }
+  ],
+  "impact": {
+    "metrics": {
+      "artistsSupported": "50+",
+      "fundingDistributed": "$500K+",
+      "eventsHosted": "20+",
+      "communityMembers": "1000+"
+    },
+    "achievements2024": [
+      "Multi-year funding secured: $450,000 anonymous commitment",
+      "Kapor Foundation multi-year partnership",
+      "Oakland Tech Week launch - inaugural ecosystem convening",
+      "Full Spectrum Capital Accelerator participation",
+      "New fiscal sponsorships: Alphabet Rockers, Ryan Nicole",
+      "Director launch: directorforgood.org",
+      "Studio upgrades with new resident Clay Xavier",
+      "Summer internship program with EOYDC, Represented, Kapor",
+      "Alameda County grant",
+      "Hiero Day and Hella Juneteenth community presence",
+      "Meta AI conferences participation (Bay Area, Chicago)",
+      "E-40 Tiny Desk support",
+      "Kev Choice / Choice Scores investment"
+    ]
+  },
+  "financials": {
+    "annualBudget": "NEEDS_INPUT",
+    "fiscalYearEnd": "NEEDS_INPUT",
+    "primaryFundingSources": [
+      "Foundation grants",
+      "Individual donors",
+      "Earned revenue from programs",
+      "Fiscal sponsorship fees"
+    ],
+    "currentFunders": [
+      "Kapor Foundation",
+      "Meta",
+      "Good Trouble VC",
+      "Akonadi Foundation",
+      "Alameda County",
+      "Full Spectrum Capital",
+      "Anonymous multi-year donor ($450K)"
+    ]
+  },
+  "demographics": {
+    "geographicFocus": "Oakland, CA / Bay Area",
+    "populationsServed": [
+      "Artists and musicians",
+      "Activists and community organizers",
+      "Creators and storytellers",
+      "Entrepreneurs",
+      "Black and BIPOC communities",
+      "Independent creators facing displacement"
+    ],
+    "issueAreas": [
+      "Arts and culture",
+      "Economic development",
+      "Technology access",
+      "Workforce development",
+      "Community building",
+      "Racial equity"
+    ]
+  },
+  "futureInitiatives": {
+    "HiiiWAV50Fund": {
+      "description": "Flagship capital model designed to support 50 artists with funding, housing, services, and ownership.",
+      "target": "$50 million",
+      "timeline": "Next decade",
+      "components": [
+        "Endowment capital for long-term sustainability",
+        "Real estate for artist housing and creative spaces",
+        "Full-spectrum capital: grants, loans, investments, guarantees"
+      ]
+    },
+    "Director": {
+      "description": "Fractional nonprofit leadership service providing backbone support to organizations",
+      "website": "directorforgood.org",
+      "status": "Launched 2024"
+    }
+  },
+  "attachments": {
+    "notes": "Upload these to JustFund when prompted",
+    "required": [
+      "IRS 501(c)(3) determination letter",
+      "Most recent Form 990",
+      "Current year budget",
+      "Board of Directors list",
+      "Most recent audited financials (if available)"
+    ]
+  },
+  "_meta": {
+    "lastUpdated": "2024-12-14",
+    "dataSource": "directorforgood.org codebase",
+    "needsReview": [
+      "EIN number",
+      "Year founded",
+      "Board size",
+      "Staff size",
+      "Program-specific budgets",
+      "Annual budget",
+      "Fiscal year end"
+    ]
+  }
+}
+
+
+

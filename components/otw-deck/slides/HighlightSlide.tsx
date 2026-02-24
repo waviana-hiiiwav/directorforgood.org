@@ -16,10 +16,12 @@ export default function HighlightSlide({ slide, onUpdate }: Props) {
     onUpdate({ ...content, [field]: value });
   };
 
+  const bullets = (content.bullets as string[]) || [];
+
   const updateBullet = (index: number, value: string) => {
-    const bullets = [...(content.bullets as string[])];
-    bullets[index] = value;
-    updateField('bullets', bullets);
+    const newBullets = [...bullets];
+    newBullets[index] = value;
+    updateField('bullets', newBullets);
   };
 
   return (
@@ -68,7 +70,7 @@ export default function HighlightSlide({ slide, onUpdate }: Props) {
             </div>
             
             <ul className="space-y-4">
-              {(content.bullets as string[]).map((bullet, i) => (
+              {bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="text-white mt-1">•</span>
                   <EditableText

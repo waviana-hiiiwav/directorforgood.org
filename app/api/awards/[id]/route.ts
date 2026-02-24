@@ -1,15 +1,20 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/db'
+import { getDbForRequest, getTenantFromRequest } from '@/db/tenanted'
 import { awards, awardRecipients, entities } from '@/db/schema'
-import { eq } from 'drizzle-orm'
+import { eq, and } from 'drizzle-orm'
 
 export async function GET(
   req: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const { id } = await params
-    const [award] = await db.select().from(awards).where(eq(awards.id, parseInt(id)))
+    const [award] = await db
+      .select()
+      .from(awards)
+      .where(and(eq(awards.id, parseInt(id)), eq(awards.orgSlug, tenant.orgSlug)))
     
     if (!award) {
       return NextResponse.json({ error: 'Award not found' }, { status: 404 })
@@ -40,6 +45,8 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const { id } = await params
     const body = await req.json()
     
@@ -62,7 +69,7 @@ export async function PUT(
         image: body.image || null,
         updatedAt: new Date(),
       })
-      .where(eq(awards.id, parseInt(id)))
+      .where(and(eq(awards.id, parseInt(id)), eq(awards.orgSlug, tenant.orgSlug)))
       .returning()
     
     if (!award) {
@@ -98,9 +105,11 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const db = getDbForRequest(req)
+    const tenant = getTenantFromRequest(req)
     const { id } = await params
     // Recipients will be cascade deleted due to FK constraint
-    await db.delete(awards).where(eq(awards.id, parseInt(id)))
+    await db.delete(awards).where(and(eq(awards.id, parseInt(id)), eq(awards.orgSlug, tenant.orgSlug)))
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Error deleting award:', error)

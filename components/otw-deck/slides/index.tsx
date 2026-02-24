@@ -2,6 +2,7 @@
 
 import { SlideData } from '@/data/otw-slides';
 import CoverSlide from './CoverSlide';
+import TOCSlide from './TOCSlide';
 import IntroSlide from './IntroSlide';
 import HighlightSlide from './HighlightSlide';
 import LeadersSlide from './LeadersSlide';
@@ -16,6 +17,8 @@ import AppendixSlide from './AppendixSlide';
 import CommitmentSlide from './CommitmentSlide';
 import PositioningSlide from './PositioningSlide';
 import GoalsResultsSlide from './GoalsResultsSlide';
+import ExecSummarySlide from './ExecSummarySlide';
+import TeamSlide from './TeamSlide';
 
 interface Props {
   slide: SlideData;
@@ -26,6 +29,8 @@ export default function SlideRenderer({ slide, onUpdate }: Props) {
   switch (slide.type) {
     case 'cover':
       return <CoverSlide slide={slide} onUpdate={onUpdate} />;
+    case 'toc':
+      return <TOCSlide slide={slide} onUpdate={onUpdate} />;
     case 'intro':
       return <IntroSlide slide={slide} onUpdate={onUpdate} />;
     case 'highlight':
@@ -68,6 +73,10 @@ export default function SlideRenderer({ slide, onUpdate }: Props) {
       return <PositioningSlide slide={slide} onUpdate={onUpdate} />;
     case 'goals-results':
       return <GoalsResultsSlide slide={slide} onUpdate={onUpdate} />;
+    case 'exec-summary':
+      return <ExecSummarySlide slide={slide} onUpdate={onUpdate} />;
+    case 'team':
+      return <TeamSlide slide={slide} onUpdate={onUpdate} />;
     default:
       return <ContentSlide slide={slide} onUpdate={onUpdate} />;
   }
@@ -101,7 +110,7 @@ function MomentsSlide({ slide, onUpdate }: Props) {
               [Event Photo]
             </div>
             
-            {(content.events as Event[]).slice(0, 2).map((event, i) => (
+            {(content.events as Event[] || []).slice(0, 2).map((event, i) => (
               <div key={i}>
                 <h3 className="text-white font-semibold mb-2">{event.name}</h3>
                 <p className="text-white/70 text-sm">{event.description}</p>
@@ -111,7 +120,7 @@ function MomentsSlide({ slide, onUpdate }: Props) {
 
           {/* Right Column */}
           <div className="space-y-6">
-            {(content.events as Event[]).slice(2).map((event, i) => (
+            {(content.events as Event[] || []).slice(2).map((event, i) => (
               <div key={i}>
                 <h3 className="text-white font-semibold mb-2">{event.name}</h3>
                 <p className="text-white/70 text-sm">{event.description}</p>
@@ -150,7 +159,7 @@ function InitiativesSlide({ slide, onUpdate }: Props) {
         <p className="text-white/70 mb-8">{content.subtitle as string}</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(content.initiatives as Initiative[]).map((initiative, i) => (
+          {(content.initiatives as Initiative[] || []).map((initiative, i) => (
             <div
               key={i}
               className="bg-[var(--purple-mid)]/30 border border-[var(--purple-mid)] rounded-lg p-6"
@@ -187,14 +196,14 @@ function StorySlide({ slide, onUpdate }: Props) {
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <div className="space-y-4">
-            {(content.paragraphs as string[]).slice(0, 2).map((para, i) => (
+            {(content.paragraphs as string[] || []).slice(0, 2).map((para, i) => (
               <p key={i} className={`text-lg leading-relaxed ${isPurple ? 'text-white/90' : 'text-white/80'}`}>
                 {para}
               </p>
             ))}
           </div>
           <div className="space-y-4">
-            {(content.paragraphs as string[]).slice(2).map((para, i) => (
+            {(content.paragraphs as string[] || []).slice(2).map((para, i) => (
               <p key={i} className={`text-lg leading-relaxed ${isPurple ? 'text-white/90' : 'text-white/80'}`}>
                 {para}
               </p>
@@ -224,7 +233,7 @@ function StartupsSlide({ slide, onUpdate }: Props) {
         <p className="text-[var(--orange)] italic mb-8">{content.subtitle as string}</p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          {(content.startups as string[]).map((startup, i) => (
+          {(content.startups as string[] || []).map((startup, i) => (
             <div
               key={i}
               className="bg-[var(--purple)]/20 border border-[var(--purple)]/40 rounded-lg p-4 text-center"
@@ -237,7 +246,7 @@ function StartupsSlide({ slide, onUpdate }: Props) {
         <div className="bg-white/5 rounded-lg p-6">
           <h3 className="text-[var(--lime)] font-semibold mb-4">Outcomes:</h3>
           <ul className="space-y-3">
-            {(content.outcomes as string[]).map((outcome, i) => (
+            {(content.outcomes as string[] || []).map((outcome, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="text-[var(--lime)]">→</span>
                 <span className="text-white/80">{outcome}</span>
@@ -268,14 +277,14 @@ function CoalitionSlide({ slide, onUpdate }: Props) {
         <p className="text-white/80 italic mb-8">{content.subtitle as string}</p>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {(content.categories as Category[]).map((cat, i) => (
+          {(content.categories as Category[] || []).map((cat, i) => (
             <div key={i} className="bg-white/10 rounded-lg p-5">
               <h3 className="text-[var(--lime)] font-semibold mb-3 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[var(--lime)]" />
                 {cat.name}
               </h3>
               <ul className="space-y-2">
-                {cat.items.map((item, j) => (
+                {(cat.items || []).map((item, j) => (
                   <li key={j} className="text-white/80 text-sm flex items-start gap-2">
                     <span className="text-white/40">•</span>
                     {item}
@@ -309,7 +318,7 @@ function OutcomesSlide({ slide, onUpdate }: Props) {
         <p className="text-[var(--orange)] italic mb-8">{content.subtitle as string}</p>
 
         <div className="grid md:grid-cols-2 gap-4">
-          {(content.outcomes as string[]).map((outcome, i) => (
+          {(content.outcomes as string[] || []).map((outcome, i) => (
             <div
               key={i}
               className="bg-white/5 border-l-4 border-[var(--lime)] p-4 rounded-r-lg"
@@ -353,7 +362,7 @@ function VisionSlide({ slide, onUpdate }: Props) {
         <div className="bg-white/10 rounded-lg p-6 mb-8">
           <h3 className="text-[var(--lime)] font-semibold mb-4">By 2029, a $5M investment would mean:</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            {(content.outcomes as string[]).map((outcome, i) => (
+            {(content.outcomes as string[] || []).map((outcome, i) => (
               <div key={i} className="flex items-start gap-3">
                 <span className="text-[var(--lime)] text-2xl font-bold">{i + 1}</span>
                 <span className="text-white/90">{outcome}</span>

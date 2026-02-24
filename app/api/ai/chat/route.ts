@@ -1,8 +1,8 @@
 import { openai } from '@ai-sdk/openai'
 import { streamText } from 'ai'
-import { CHATBOT_SYSTEM_PROMPT } from '@/lib/director-knowledge'
+import { getChatbotSystemPrompt } from '@/lib/director-knowledge'
 
-export const runtime = 'edge'
+// Note: No edge runtime - we need Node.js fs to read deck-content.json dynamically
 
 export async function POST(req: Request) {
   const { messages } = await req.json()
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   const result = streamText({
     model: openai('gpt-4o-mini'),
     messages,
-    system: CHATBOT_SYSTEM_PROMPT,
+    system: getChatbotSystemPrompt(), // Dynamically reads from deck-content.json
     temperature: 0.7,
   })
   

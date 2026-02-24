@@ -34,7 +34,7 @@ export default function ContentSlide({ slide, onUpdate }: Props) {
 
         {/* Bullets */}
         <ul className="space-y-6 max-w-3xl">
-          {(content.bullets as string[]).map((bullet, i) => (
+          {(content.bullets as string[] || []).map((bullet, i) => (
             <li key={i} className="flex items-start gap-4">
               <span className="text-[var(--lime)] text-2xl font-bold">{i + 1}.</span>
               <EditableText

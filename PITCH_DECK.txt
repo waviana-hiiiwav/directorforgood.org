@@ -25,6 +25,8 @@ HIGHLIGHT: Promising orgs plateau at $300–600k or quietly shut down — not fo
 
 NOTE: When funding tightens and staff are cut, all of this collapses back onto one person. Right now, most of their time and money are trapped in back-office work that should be automated.
 
+IMAGE: Photorealistic image of overwhelmed nonprofit founder, stressed out, managing 5 different jobs, looking at one phone while talking on a second phone, laptop open with multiple browser tabs, sticky notes everywhere, in a small cluttered office
+
 ================================================================================
 SLIDE 2: Ideal Customer – Downshifted Orgs (Beachhead)
 ================================================================================
@@ -44,6 +46,8 @@ HIGHLIGHT: These leaders don't need another tool. They need a backbone.
 
 NOTE: This hits founders of color especially hard, as equity-era funding retrenches.
 
+IMAGE: Photorealistic image of a nonprofit leader alone in a half-empty office, packing boxes, looking exhausted but determined, wall behind shows framed photos of community events and a chart with a line that rose then fell
+
 ================================================================================
 SLIDE 3: Ideal Customer – Foundations as Buyers
 ================================================================================
@@ -62,19 +66,21 @@ Why this works:
 
 HIGHLIGHT: A single foundation can unlock Director for an entire cohort of grantees.
 
+IMAGE: Photorealistic image of a foundation program officer in a modern glass office building meeting room, laptop showing a portfolio dashboard, shaking hands with multiple nonprofit leaders visible through glass walls, conveying partnership and scale
+
 ================================================================================
 SLIDE 4: Broken Options
 ================================================================================
 
 Existing solutions don't fit this stage.
 
-DIY SaaS stack:
+DIY SaaS stack
 CRMs, grant tools, accounting, email… Founders don't have time to integrate and maintain them.
 
-Consultants & agencies:
+Consultants & agencies
 Project-based, expensive, seen as "overhead." Advice without ongoing responsibility.
 
-Rebuilding staff:
+Rebuilding staff
 • ED: $100–150k
 • Ops/Finance: ~$100k
 • Development: ~$100k
@@ -83,6 +89,8 @@ Rebuilding staff:
 HIGHLIGHT: There is no integrated, AI-native backbone designed for $400k–$1M orgs that have real relationships but no team.
 
 NOTE: $360–450k/year for the backbone on a fragile budget.
+
+IMAGE: Photorealistic split image: left side shows chaotic desk with 10+ software logos/tabs open on monitors, middle shows expensive consultant in suit walking away with invoice, right side shows empty desks with 'position unfilled' signs - all conveying broken alternatives
 
 ================================================================================
 SLIDE 5: Director – What We Are
@@ -106,6 +114,8 @@ HIGHLIGHT: We plug into an existing org and donor base and give them the leaders
 
 CALLOUT: Short term, we're a forward-deployed AI support team. Long term, we're building the autopilot that runs the entire nonprofit back office so a single founder can run a $5M org with almost no internal ops staff.
 
+IMAGE: Photorealistic image of a confident nonprofit founder at a clean modern desk, single elegant dashboard on screen, small supportive team visible in background video call, conveying clarity and capability instead of chaos
+
 ================================================================================
 SLIDE 6: Fundraising Philosophy – Relationships First
 ================================================================================
@@ -128,6 +138,8 @@ Director's focus:
 
 HIGHLIGHT: Director is a relationship and revenue engine, not a shot-in-the-dark grant factory.
 
+IMAGE: Photorealistic image of nonprofit founder having coffee with a major donor in a warm, professional setting - genuine human connection, no screens, representing relationship-first fundraising approach
+
 ================================================================================
 SLIDE 7: The Director Pod – Capacity Ramp
 ================================================================================
@@ -140,16 +152,18 @@ Year 1 – Proto-Pod Team:
 • 1 Finance Director
 • 1 Founding Engineer
 
-Phase 2 – 8 orgs:
+Phase 2 – 8 orgs
 Mature core agents handle repetitive tasks. Same structure supports more orgs.
 
-Phase 3 – 16 orgs:
+Phase 3 – 16 orgs
 2+ FDDs. Standardized playbooks. Agents do recurring work.
 
-Phase 4 – 100+ orgs:
+Phase 4 – 100+ orgs
 • AI-native director team handles 90–95% of recurring work
 • Pod becomes supervisory layer, not execution layer
 • Single founder safely runs $3–5M org with no internal back-office hires
+
+IMAGE: Clean horizontal timeline infographic showing pod scaling: Year 1 with 4 org icons and small team, Year 2 with 8 org icons, Year 3 with 16 org icons, Year 4+ with 100+ orgs, AI automation percentage increasing at each stage (shown as filling progress bars)
 
 ================================================================================
 SLIDE 8: Director OS – Product Overview
@@ -157,19 +171,21 @@ SLIDE 8: Director OS – Product Overview
 
 One pane of glass for an org's backbone.
 
-Revenue & Relationships:
+Revenue & Relationships
 Major gifts map, warm pipeline, next-best actions
 
-Runway & Finance:
+Runway & Finance
 Live cash forecasts, budget vs actuals visibility
 
-Ops & Compliance:
+Ops & Compliance
 Recurring task engine, checklists, playbooks
 
-Narratives & Reporting:
+Narratives & Reporting
 Board decks, funder reports, impact one-pagers
 
 NOTE: Data flows in from email, calendar, finance systems, docs, and existing CRMs. Over time, Director OS becomes the autopilot layer that runs the nonprofit back office end-to-end.
+
+IMAGE: Clean, modern SaaS dashboard mockup with 4 distinct quadrants: Revenue (donor relationship map with warm/hot indicators), Runway (cash flow chart with 12-month projection), Ops (checklist with green checkmarks), Narratives (board deck preview thumbnail) - minimal, elegant design
 
 ================================================================================
 SLIDE 9: AI Agents – From 2–4x Today to 90–95% Automation
@@ -177,49 +193,32 @@ SLIDE 9: AI Agents – From 2–4x Today to 90–95% Automation
 
 On the path to automating 90–95% of nonprofit back-office work.
 
-Major Gifts Agent:
+Major Gifts Agent
 • Scans email, calendar, CRM
 • Maintains relationship maps
 • Drafts donor emails & briefs
 
-Finance & Runway Agent:
+Finance & Runway Agent
 • Pulls accounting data
 • Proposes categorizations
 • Raises runway alerts
 
-Ops & Compliance Agent:
+Ops & Compliance Agent
 • Runs recurring checklists
 • Generates reminders
 • Manages task lists
 
-Board & Reporting Agent:
+Board & Reporting Agent
 • Assembles board decks
 • Creates funder reports
 • Keeps board-ready view
 
 HIGHLIGHT: Today: Agents draft, humans decide. Future: Agents execute end-to-end; humans supervise and handle exceptions.
 
-================================================================================
-SLIDE 10: Long-Term Vision – 10x the Backbone, 10x the Impact
-================================================================================
-
-From forward-deployed support team to fully autonomous nonprofit autopilot.
-
-Today (v1 Director):
-• Forward-deployed Director + Finance lead
-• AI agents assist with finance, ops, comms, and donor prep
-• One Pod supports 4–16 orgs
-
-Future (Where We're Going):
-• Fully AI-native director team for finance, ops, comms, development
-• Agents handle 90–95% of recurring back-office work
-• One Pod supervises 100+ orgs
-• Founders and boards focus almost entirely on programs and relationships
-
-HIGHLIGHT: Audacious goal: No nonprofit ever dies because of operations, fundraising, or compliance again — only because the mission is done.
+IMAGE: Sleek infographic showing 4 AI agents as friendly robot icons: Major Gifts Agent (handshake icon), Finance Agent (calculator icon), Ops Agent (checklist icon), Reporting Agent (document icon) - connected by flowing data lines, with human supervisor figure at center reviewing outputs
 
 ================================================================================
-SLIDE 11: Economics – Why This Makes Sense
+SLIDE 10: Economics – Why This Makes Sense
 ================================================================================
 
 Director makes a serious backbone affordable and scalable.
@@ -241,6 +240,37 @@ HIGHLIGHT: Save $100-180k/year in backbone costs
 
 NOTE: As Pods scale, pod-level gross margins expand while keeping human leadership involvement high.
 
+IMAGE: Clean bar chart comparing costs: tall red bar labeled 'Traditional Backbone $360-450k/year' with icons for ED, Ops, Dev, Comms roles, versus shorter green bar labeled 'With Director $180-270k/year' showing ED + Director Pod, with '$100-180k SAVED' callout and arrow
+
+================================================================================
+SLIDE 11: Market Opportunity
+================================================================================
+
+A massive, underserved market ready for AI-native solutions.
+
+TAM: $164B – Total US Nonprofit Administrative Spending
+• 1.8M nonprofits in the US (1.5M are 501(c)(3)s)
+• Nonprofit sector contributes $1.4 trillion to GDP
+• Administrative overhead averages 11.7% = $164B annually
+• This spending is ripe for AI automation
+
+SAM: $3.5B – Small/Mid Nonprofits ($250k–$2M budgets)
+• ~108,000 organizations in our target segment
+• 92% of nonprofits operate under $1M/year
+• Current back-office spend: $32k–$200k per org
+• Existing solutions: $5.5B nonprofit software + $6.7B consulting market
+
+SOM: $50M – 5-Year Obtainable Market
+• 500 organizations at ~$100k/year
+• 30–50 pods at 10–16 orgs each
+• Represents <2% of SAM (credible capture rate)
+
+HIGHLIGHT: 68% of nonprofits now use AI (up from 58% in 2023). The market is ready for an AI-native backbone.
+
+NOTE: Sources: Independent Sector, Statista, NCCS, Google for Nonprofits Survey 2025, Intent Market Research
+
+IMAGE: Clean infographic with three concentric circles showing market size: outer ring labeled TAM $164B (all US nonprofit admin spending), middle ring SAM $3.5B (small/mid nonprofits), inner circle SOM $50M (5-year target), with icons representing nonprofits at different scales
+
 ================================================================================
 SLIDE 12: Why Now – AI Agents + Nonprofit Pressure
 ================================================================================
@@ -260,19 +290,21 @@ The opportunity:
 
 HIGHLIGHT: Director sits at this intersection: an AI-native backbone delivered by a lean, forward-deployed team to orgs that cannot justify rebuilding full in-house leadership.
 
+IMAGE: Elegant chart showing two rising trend lines intersecting at 'NOW': blue line labeled 'AI Agent Capability' rising steeply from 2020-2025, red line labeled 'Nonprofit Operational Pressure' also rising, intersection point highlighted with 'Director' logo at the sweet spot
+
 ================================================================================
 SLIDE 13: Go-to-Market
 ================================================================================
 
 We start where we already have pull.
 
-Existing relationships:
+Existing relationships
 First 2–4 orgs from founders you're already effectively "directing."
 
-Downshifted $1M orgs:
+Downshifted $1M orgs
 Target leaders who proved they can raise $400k–$1M but had to cut staff.
 
-Funder collaborations:
+Funder collaborations
 Position Director as capacity-building that makes grantees more investable.
 
 Sales motion:
@@ -282,30 +314,59 @@ Sales motion:
 • Close annual retainers
 • Expand scope over time
 
+IMAGE: Concentric circles go-to-market diagram: innermost circle 'Existing Relationships' (2-4 orgs), middle ring 'Downshifted $1M Orgs' showing target segment, outer ring 'Foundation Partnerships' for scale, with arrows showing expansion outward from core
+
 ================================================================================
 SLIDE 14: Business Model & QSBS-Friendly Structure
 ================================================================================
 
 AI-native vertical SaaS with embedded forward-deployed team.
 
-Revenue model:
+Revenue model
 • Annual retainers per org
 • Tied to budget band and complexity
 • Goal: multiple Pods, each supporting up to 16 orgs
 • At scale, Director can redirect billions of dollars of nonprofit overhead back into direct programs and community work
 
-Cost structure:
+Cost structure
 • Lean Pods (FDD + Finance Director)
 • Supported by agents and product
 • Engineering compounds across all clients
 
-QSBS-aware design:
+QSBS-aware design
 • U.S. C-corp
 • Product-centric operating business
 • Software & data model assets
 
+IMAGE: Circular flywheel diagram showing business model: 'Annual Retainers' feeds into 'Pod Capacity Growth' feeds into 'AI Agent Development' feeds into 'Support More Orgs' which loops back - arrows showing momentum building, dollar signs and org icons at each stage
+
 ================================================================================
-SLIDE 15: Team – Lean Year-1 Plan
+SLIDE 15: Strategic Partners & Structure
+================================================================================
+
+HiiiWAV is our 501(c)(3) partner for philanthropic capacity-building.
+
+HiiiWAV (501c3)
+• Founded by Bosko Kante, focused on arts and social impact
+• Serves as philanthropic conduit for capacity-building grants to orgs Director serves
+• Enables foundations and donors to fund nonprofit backbone capacity tax-deductibly
+
+How it works:
+• Foundations grant to HiiiWAV for capacity-building programs
+• HiiiWAV funds nonprofits' access to Director services
+• Director provides backbone support; philanthropic dollars stay with nonprofits
+
+Governance & Conflict Management:
+• Independent HiiiWAV board approves all Director-related arrangements
+• Bosko recuses from any HiiiWAV decisions involving Director
+• Arms-length pricing; written conflict of interest policy on file
+
+HIGHLIGHT: This structure lets philanthropic dollars flow to under-resourced nonprofits while Director operates as a sustainable, investor-backed business.
+
+IMAGE: Clean flow diagram showing structure: Foundation icons at top flowing dollars down to HiiiWAV 501(c)(3) in center, which grants to Nonprofit org icons below, while Director (shown as service arrows) provides backbone support to the same nonprofits - illustrating philanthropic and service flows
+
+================================================================================
+SLIDE 16: Team – Lean Year-1 Plan
 ================================================================================
 
 Small, high-leverage founding team with 12 months of runway.
@@ -314,19 +375,41 @@ TEAM:
 Bosko Kante – CEO & Founder
 Software developer and technical founder. Vision, sales, fundraising, relationships. Founder of HiiiWAV, with deep experience building and supporting nonprofits in the arts and social impact space.
 
-Forward-Deployed Director (hire #1):
+Founding Engineer (hire #1)
+Director OS + first wave of agents
+
+Forward-Deployed Director (hire #2)
 Nonprofit ops + fundraising, embedded across first ~4 orgs
 
-Finance Director (hire #2):
+Finance Director (hire #3)
 Finance + ops across pod, designs playbooks
-
-Founding Engineer (hire #3):
-Director OS + first wave of agents
 
 NOTE: Target raise: ~$1M for 12 months runway. Early org retainers reduce net burn.
 
+IMAGE: Photorealistic image of diverse founding team in a modern co-working space: CEO/Founder at whiteboard sketching product vision, Forward-Deployed Director on video call with nonprofit client, Finance Director reviewing dashboards, Founding Engineer coding - collaborative energy, startup vibe
+
 ================================================================================
-SLIDE 16: Roadmap & Ask
+SLIDE 17: Current Customers & Traction
+================================================================================
+
+Examples of our successful partnerships.
+
+Our customers include:
+• HiiiWAV
+• Alphabet Rockers
+• Soul Development
+• Prospect Band
+• Ryan Nicole
+
+Traction highlights:
+These partnerships exemplify our growing impact and successful collaboration with influential organizations.
+
+HIGHLIGHT: Real-world impact through strategic partnerships.
+
+IMAGE: Photorealistic collage of nonprofit customer organizations in action: HiiiWAV music festival crowd, Alphabet Rockers performing for kids, community gathering at Soul Development event, Prospect Band performing live, artistic shot from Ryan Nicole project - vibrant, impactful imagery
+
+================================================================================
+SLIDE 18: Roadmap & Ask
 ================================================================================
 
 0–12 months (this raise):
@@ -349,23 +432,28 @@ SLIDE 16: Roadmap & Ask
 • A single founder can safely run a $3–5M organization with no internal back-office hires
 • Director redirects billions in nonprofit overhead back into direct programs
 
+IMAGE: Horizontal roadmap timeline with milestones: Year 1 marker shows '4 orgs, v1 OS, prove model', Year 2 shows '8 orgs, hardened agents', Year 3 shows '16-org pods, multiple verticals', Year 4+ shows '100+ orgs, 90-95% automated' with exponential curve rising behind the timeline
+
 ================================================================================
-SLIDE 17: Current Customers & Traction
+SLIDE 19: Long-Term Vision – 10x the Backbone, 10x the Impact
 ================================================================================
 
-Examples of our successful partnerships.
+From forward-deployed support team to fully autonomous nonprofit autopilot.
 
-Our customers include:
-• HiiiWAV
-• Alphabet Rockers
-• Soul Development
-• Prospect Band
-• Ryan Nicole
+Today (v1 Director)
+• Forward-deployed Director + Finance lead
+• AI agents assist with finance, ops, comms, and donor prep
+• One Pod supports 4–16 orgs
 
-Traction highlights:
-These partnerships exemplify our growing impact and successful collaboration with influential organizations.
+Future (Where We're Going)
+• Fully AI-native director team for finance, ops, comms, development
+• Agents handle 90–95% of recurring back-office work
+• One Pod supervises 100+ orgs
+• Founders and boards focus almost entirely on programs and relationships
 
-HIGHLIGHT: Real-world impact through strategic partnerships.
+HIGHLIGHT: Audacious goal: No nonprofit ever dies because of operations, fundraising, or compliance again — only because the mission is done.
+
+IMAGE: Split infographic: Left side 'Today' shows small team of 4 humans supporting 4 nonprofit icons, Right side 'Future' shows same small team with AI agents surrounding them, supporting 100+ nonprofit icons radiating outward - conveying massive scale increase
 
 ================================================================================
 THE ASK: $1.0M
@@ -377,3 +465,8 @@ THE ASK: $1.0M
 • At scale, redirect billions of dollars of nonprofit overhead back into direct programs and community work
 
 ================================================================================
+
+
+
+
+

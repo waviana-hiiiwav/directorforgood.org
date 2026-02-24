@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-XX",
+    "description": "Director features organized by role - public-facing capabilities"
+  },
+  "features": [
+    {
+      "id": "strategy-documentation",
+      "title": "Strategy Documentation & Planning",
+      "description": "Transform ideas into actionable strategy documents, OKRs, and multi-year plans aligned with mission priorities",
+      "directorRole": "executive"
+    },
+    {
+      "id": "time-protection",
+      "title": "Executive Time Protection",
+      "description": "Prioritize focus areas, filter distractions, and ensure time is spent on highest-impact activities",
+      "directorRole": "executive"
+    },
+    {
+      "id": "board-alignment",
+      "title": "Board & Stakeholder Alignment",
+      "description": "Keep board, funders, and team aligned around strategic priorities and organizational vision",
+      "directorRole": "executive"
+    },
+    {
+      "id": "cash-runway-tracking",
+      "title": "Live Cash & Runway Visibility",
+      "description": "Real-time cash position tracking with 6-12 month runway forecasts and scenario planning",
+      "directorRole": "finance"
+    },
+    {
+      "id": "budget-actuals",
+      "title": "Budget vs Actuals Reporting",
+      "description": "Monthly financial close with automated budget variance analysis and board-ready financial reports",
+      "directorRole": "finance"
+    },
+    {
+      "id": "financial-compliance",
+      "title": "Financial Compliance & Audit Support",
+      "description": "Track restricted vs unrestricted funds, prepare for audits, and ensure timely 990 filings",
+      "directorRole": "finance"
+    },
+    {
+      "id": "major-gifts-pipeline",
+      "title": "Major Gifts Pipeline Management",
+      "description": "Map and grow relationships with major donors and anchor institutions through relationship tracking and next-best-action recommendations",
+      "directorRole": "development"
+    },
+    {
+      "id": "universal-grant-platform",
+      "title": "Universal Grant Platform Sign-Up",
+      "description": "Access to thousands of funders through streamlined grant application platforms like JustFund and Submittable",
+      "directorRole": "development"
+    },
+    {
+      "id": "meeting-debrief",
+      "title": "Post-Meeting Debrief Automation",
+      "description": "Automated capture of key takeaways, commitments, and next steps from funder and partner meetings",
+      "directorRole": "development"
+    },
+    {
+      "id": "compliance-calendar",
+      "title": "Compliance Calendar & Filings",
+      "description": "Never miss a deadline with automated tracking of regulatory filings, license renewals, and compliance requirements",
+      "directorRole": "ops"
+    },
+    {
+      "id": "recurring-ops-tasks",
+      "title": "Recurring Operations Management",
+      "description": "Automated task engine for payroll, vendor payments, facilities, and operational workflows with ownership tracking",
+      "directorRole": "ops"
+    },
+    {
+      "id": "vendor-contract-management",
+      "title": "Vendor & Contract Management",
+      "description": "Track contracts, subscriptions, and vendor relationships with renewal alerts and cost optimization",
+      "directorRole": "ops"
+    },
+    {
+      "id": "content-calendar",
+      "title": "Content Calendar & Scheduling",
+      "description": "Plan and schedule social media posts, newsletters, and communications across all channels with engagement analytics",
+      "directorRole": "communications"
+    },
+    {
+      "id": "impact-storytelling",
+      "title": "Impact Storytelling & Reporting",
+      "description": "Create compelling narratives, board decks, funder reports, and annual reports from program data and outcomes",
+      "directorRole": "communications"
+    },
+    {
+      "id": "donor-communications",
+      "title": "Donor & Community Communications",
+      "description": "Draft and send newsletters, donor updates, and community announcements with personalization and segmentation",
+      "directorRole": "communications"
+    },
+    {
+      "id": "program-outcomes-tracking",
+      "title": "Program Outcomes & Impact Tracking",
+      "description": "Measure and report program effectiveness with data collection, analysis, and impact visualization",
+      "directorRole": "program"
+    },
+    {
+      "id": "program-operations",
+      "title": "Program Operations & Logistics",
+      "description": "Manage program delivery, participant tracking, event coordination, and resource allocation",
+      "directorRole": "program"
+    },
+    {
+      "id": "grant-reporting",
+      "title": "Grant Reporting & Funder Updates",
+      "description": "Prepare timely grant reports, funder updates, and program narratives that demonstrate impact and compliance",
+      "directorRole": "program"
+    }
+  ]
+}
+
+
+

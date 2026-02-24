@@ -16,6 +16,9 @@ export async function SiteHeader() {
             <a href="#solution" className="text-gray-300 hover:text-white transition-colors">
               About
             </a>
+            <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors">
+              Dashboard Demo
+            </Link>
             <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </a>

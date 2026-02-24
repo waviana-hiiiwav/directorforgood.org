@@ -88,11 +88,11 @@ export default function BudgetSlide({ slide, onUpdate }: Props) {
         </div>
 
         {/* Additional Details */}
-        {content.details && (
-          <div className="space-y-2">
+        {content.details && Array.isArray(content.details) && (
+          <div className="space-y-2 mt-8">
             {(content.details as string[]).map((detail, i) => (
               <p key={i} className="text-white/70 text-sm">
-                {detail}
+                • {detail}
               </p>
             ))}
           </div>
