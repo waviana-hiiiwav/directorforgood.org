@@ -1,5 +1,5 @@
 import { pgTable, text, timestamp, boolean, serial, jsonb, integer, date } from 'drizzle-orm/pg-core'
-import { relations } from 'drizzle-orm'
+import { relations, sql } from 'drizzle-orm'
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
@@ -413,6 +413,8 @@ export const parties = pgTable('parties', {
   partyType: text('party_type').notNull(), // 'person' | 'organization'
   displayName: text('display_name').notNull(), // Primary name
   legalName: text('legal_name'), // For orgs: legal entity name
+  aliases: text('aliases').array().default(sql`'{}'::text[]`), // Alternative names for resolution
+
   slug: text('slug'), // URL-friendly identifier
   // Profile fields
   bio: text('bio'),
@@ -518,3 +520,127 @@ export const eventParticipants = pgTable('event_participants', {
 
 export type EventParticipant = typeof eventParticipants.$inferSelect
 export type NewEventParticipant = typeof eventParticipants.$inferInsert
+
+// ============================================================================
+// CONVERSATIONS + ARTIFACTS - AI-native capture engine
+// ----------------------------------------------------------------------------
+// A `conversation` is a chat thread: a voice brain-dump, a typed chat, or an
+// agent run. `messages` are the turn-by-turn instruction trail.
+// `artifacts` are first-class documents (a summary, action items, an email)
+// that are generated and iterated *separately* from the message stream and
+// versioned, so a document can be refined over many turns without churning
+// inline in the chat (the ChatGPT pain point). Generalizes the existing
+// deckVersions (AI-edited, versioned doc) + debriefCalls (transcript+analysis).
+// ============================================================================
+
+export const conversations = pgTable('conversations', {
+  id: serial('id').primaryKey(),
+  orgSlug: text('org_slug').notNull().default('hiiiwav'), // Multi-tenant
+  userId: integer('user_id').references(() => users.id), // owner (null = agent-initiated)
+  partyId: integer('party_id').references(() => parties.id), // subject, e.g. the donor this is about
+  title: text('title'),
+  source: text('source').notNull().default('web'), // 'ios' | 'web' | 'agent'
+  status: text('status').default('active'), // 'active' | 'archived'
+  metadata: jsonb('metadata').$type<Record<string, unknown>>(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
+export const messages = pgTable('messages', {
+  id: serial('id').primaryKey(),
+  conversationId: integer('conversation_id').notNull().references(() => conversations.id, { onDelete: 'cascade' }),
+  role: text('role').notNull(), // 'user' | 'assistant' | 'system' | 'tool'
+  content: text('content').notNull(),
+  // Optional structured payload: voice audio refs, artifact ops the turn performed, tool calls, etc.
+  metadata: jsonb('metadata').$type<{
+    audioUrl?: string
+    capturedVia?: 'voice' | 'text'
+    artifactOps?: Array<{ op: 'create' | 'update'; artifactId?: number; kind?: string }>
+    [key: string]: unknown
+  }>(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+
+export const artifacts = pgTable('artifacts', {
+  id: serial('id').primaryKey(),
+  orgSlug: text('org_slug').notNull().default('hiiiwav'), // Multi-tenant
+  conversationId: integer('conversation_id').references(() => conversations.id, { onDelete: 'cascade' }),
+  partyId: integer('party_id').references(() => parties.id), // subject (e.g. donor a summary is about)
+  kind: text('kind').notNull(), // 'summary' | 'action_items' | 'email' | 'doc' | 'note'
+  title: text('title').notNull(),
+  // Denormalized pointer to the live version. No FK (would be circular with artifact_versions);
+  // maintained by the app layer so reads + "restore to older version" are cheap.
+  currentVersionId: integer('current_version_id'),
+  status: text('status').default('active'), // 'active' | 'archived'
+  metadata: jsonb('metadata').$type<Record<string, unknown>>(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
+export const artifactVersions = pgTable('artifact_versions', {
+  id: serial('id').primaryKey(),
+  artifactId: integer('artifact_id').notNull().references(() => artifacts.id, { onDelete: 'cascade' }),
+  versionNumber: integer('version_number').notNull(),
+  content: text('content').notNull(), // markdown body of this version
+  changeSummary: text('change_summary'), // short note on what changed (like deckVersions.description)
+  createdByMessageId: integer('created_by_message_id').references(() => messages.id, { onDelete: 'set null' }),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+
+export const conversationsRelations = relations(conversations, ({ many, one }) => ({
+  messages: many(messages),
+  artifacts: many(artifacts),
+  party: one(parties, { fields: [conversations.partyId], references: [parties.id] }),
+}))
+
+export const messagesRelations = relations(messages, ({ one }) => ({
+  conversation: one(conversations, { fields: [messages.conversationId], references: [conversations.id] }),
+}))
+
+export const artifactsRelations = relations(artifacts, ({ many, one }) => ({
+  versions: many(artifactVersions),
+  conversation: one(conversations, { fields: [artifacts.conversationId], references: [conversations.id] }),
+}))
+
+export const artifactVersionsRelations = relations(artifactVersions, ({ one }) => ({
+  artifact: one(artifacts, { fields: [artifactVersions.artifactId], references: [artifacts.id] }),
+}))
+
+export type Conversation = typeof conversations.$inferSelect
+export type NewConversation = typeof conversations.$inferInsert
+export type Message = typeof messages.$inferSelect
+export type NewMessage = typeof messages.$inferInsert
+export type Artifact = typeof artifacts.$inferSelect
+export type NewArtifact = typeof artifacts.$inferInsert
+export type ArtifactVersion = typeof artifactVersions.$inferSelect
+export type NewArtifactVersion = typeof artifactVersions.$inferInsert
+
+// ============================================================================
+// TIME TRACKING - hourly time clock (e.g. Maya) → timesheets → FOS invoices
+// ----------------------------------------------------------------------------
+// Operational time data lives here in the canonical store; invoice *issuance*
+// and the financial record stay in FOS (the established security boundary).
+// `invoiceRef` links a billed entry back to its FOS invoice.
+// ============================================================================
+
+export const timeEntries = pgTable('time_entries', {
+  id: serial('id').primaryKey(),
+  orgSlug: text('org_slug').notNull().default('hiiiwav'), // Multi-tenant
+  userId: integer('user_id').notNull().references(() => users.id),
+  partyId: integer('party_id').references(() => parties.id), // optional client/project subject
+  projectTag: text('project_tag'), // e.g. 'oakland-tech-week', 'hiiiwav-general'
+  description: text('description'),
+  startedAt: timestamp('started_at').notNull(),
+  endedAt: timestamp('ended_at'), // null = currently running
+  durationSeconds: integer('duration_seconds'), // computed on stop
+  billable: boolean('billable').default(true),
+  rateCents: integer('rate_cents'), // hourly rate in cents
+  status: text('status').default('open'), // 'open' | 'stopped' | 'invoiced'
+  invoiceRef: text('invoice_ref'), // external FOS invoice id once billed
+  metadata: jsonb('metadata').$type<Record<string, unknown>>(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
+export type TimeEntry = typeof timeEntries.$inferSelect
+export type NewTimeEntry = typeof timeEntries.$inferInsert
