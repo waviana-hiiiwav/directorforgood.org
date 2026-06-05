@@ -6,7 +6,7 @@
 > - **App Store name:** "Director for Good" · **home-screen label** (`CFBundleDisplayName`): **"Director"** (the full name is 17 chars and truncates under the icon; "Director" shows clean).
 > - **Xcode target / product / scheme:** `Director` · **project:** `Director.xcodeproj`
 > - **Bundle id:** `org.directorforgood.app` · **URL scheme:** `directorforgood://`
-> - Inside the app, the **fundraising space is "Raise"** — a mode within Director, not a separate app or brand.
+> - Inside the app, the **fundraising space is "Develop"** — a mode within Director (it maps to the Development Director), not a separate app or brand.
 
 ---
 
