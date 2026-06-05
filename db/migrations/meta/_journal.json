@@ -36,6 +36,20 @@
       "when": 1765290497299,
       "tag": "0004_abandoned_rawhide_kid",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1772837321682,
+      "tag": "0005_wonderful_morg",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1780629286138,
+      "tag": "0006_adorable_doctor_spectrum",
+      "breakpoints": true
     }
   ]
 }
